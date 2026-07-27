@@ -16,4 +16,8 @@
             <p>{{ video.createdAt|ago }}</p>
         </div>
     {% endfor %}
+
+    <div class="navigation d-flex justify-content-center mb-4">
+    {{ knp_pagination_render(videos) }}
+    </div>
 {% endblock %}
