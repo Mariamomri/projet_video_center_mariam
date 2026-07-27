@@ -23,7 +23,7 @@ final class VideoController extends AbstractController
         ]);
     }
 
-    #[Route(path: "/video/{id}", name: "app_video_show")]
+    #[Route(path: "/video/{id}", name: "app_video_show",  requirements: ['id' => '\d+', 'slug' => '[a-z0-9-]+'])]
     public function show(Video $video): Response
     {
         return $this->render('video/show.html.twig', [
