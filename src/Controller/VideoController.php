@@ -31,6 +31,25 @@ final class VideoController extends AbstractController
         ]);
     }
 
+
+    #[Route(path: '/video/{id}/edit', name: 'app_video_edit')]
+    public function edit(Video $video, Request $request, EntityManagerInterface $em): Response
+    {
+        $form = $this->createForm(VideoType::class, $video);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em->flush();
+            return $this->redirectToRoute('app_video_show', ['id' => $video->getId()]);
+        }
+
+        return $this->render('video/edit.html.twig', [
+            'video' => $video,
+            'monForm' => $form
+        ]);
+    }
+
+
     #[Route(path: '/video/create', name: 'app_video_create')]
     public function create(Request $request, EntityManagerInterface $em): Response
     {
@@ -49,22 +68,6 @@ final class VideoController extends AbstractController
         ]);
     }
 
-    #[Route(path: '/video/{id}/edit', name: 'app_video_edit')]
-    public function edit(Video $video, Request $request, EntityManagerInterface $em): Response
-    {
-        $form = $this->createForm(VideoType::class, $video);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em->flush();
-            return $this->redirectToRoute('app_video_show', ['id' => $video->getId()]);
-        }
-
-        return $this->render('video/edit.html.twig', [
-            'video' => $video,
-            'monForm' => $form
-        ]);
-    }
 
     #[Route(path: '/video/{id}/delete', name: 'app_video_delete')]
     public function delete(Video $video, EntityManagerInterface $em): Response
