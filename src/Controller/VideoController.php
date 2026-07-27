@@ -53,11 +53,17 @@ final class VideoController extends AbstractController
     #[Route(path: '/video/create', name: 'app_video_create')]
     public function create(Request $request, EntityManagerInterface $em): Response
     {
+        if (!$this->getUser()) {
+            $this->addFlash('error', 'Vous devez vous connecter pour créer une vidéo !');
+            return $this->redirectToRoute('app_login');
+        }
+
         $video = new Video;
         $form = $this->createForm(VideoType::class, $video);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $video->setUser($this->getUser());
             $em->persist($video);
             $em->flush();
             return $this->redirectToRoute('app_home');
