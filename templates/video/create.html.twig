@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Ajout d'une vidéo{% endblock %}
+{% block title %}{{ 'videoCreateTemplate.title' | trans }}{% endblock %}
 
 {% block body %}
-    <h1>Ajout d'une vidéo</h1>
+    <h1>{{ 'videoCreateTemplate.title' | trans }}</h1>
 
     {{ form_start(monForm) }}
         {{ form_row(monForm.title) }}
@@ -12,5 +12,5 @@
         {{ form_row(monForm.save) }}
     {{ form_end(monForm) }}
 
-    <a href="{{ path('app_home') }}">Retour</a>
+    <a href="{{ path('app_home') }}">{{ 'videoTemplate.back' | trans }}</a>
 {% endblock %}

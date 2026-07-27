@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Bienvenue dans Vidéo Center{% endblock %}
+{% block title %}{{ 'homeTemplate.title' | trans }}{% endblock %}
 
 {% block body %}
-    <h1>Bienvenue dans Vidéo Center</h1>
+    <h1>{{ 'homeTemplate.title' | trans }}</h1>
 
     {% for video in videos %}
         <div>
@@ -12,7 +12,7 @@
                 <iframe width="300" height="200" src="{{ video.videoLink }}"></iframe>
             </a>
             <p>{{ video.descritpion|slice(0, 25) }}</p>
-            <p>Par {{ video.user.firstname }} {{ video.user.lastname }}</p>
+            <p>{{ 'videoTemplate.by' | trans }} {{ video.user.firstname }} {{ video.user.lastname }}</p>
             <p>{{ video.createdAt|ago }}</p>
         </div>
     {% endfor %}
