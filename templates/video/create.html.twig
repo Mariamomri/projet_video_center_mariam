@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Édition d'une vidéo{% endblock %}
+{% block title %}Ajout d'une vidéo{% endblock %}
 
 {% block body %}
-    <h1>Édition de la vidéo : {{ video.title }}</h1>
+    <h1>Ajout d'une vidéo</h1>
 
     {{ form_start(monForm) }}
         {{ form_row(monForm.title) }}
@@ -12,5 +12,5 @@
         {{ form_row(monForm.save) }}
     {{ form_end(monForm) }}
 
-    <a href="{{ path('app_video_show', {id: video.id}) }}">Retour</a>
+    <a href="{{ path('app_home') }}">Retour</a>
 {% endblock %}
