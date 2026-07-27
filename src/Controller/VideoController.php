@@ -10,6 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Attribute\Route;
+use App\Entity\User;
 
 final class VideoController extends AbstractController
 {
@@ -23,9 +24,22 @@ final class VideoController extends AbstractController
         ]);
     }
 
-    #[Route(path: "/video/{id}", name: "app_video_show",  requirements: ['id' => '\d+', 'slug' => '[a-z0-9-]+'])]
+    #[Route(path: "/video/{id}", name: "app_video_show", requirements: ['id' => '\d+'])]
     public function show(Video $video): Response
     {
+        if ($video->isPremiumVideo()) {
+            if (!$this->getUser()) {
+                $this->addFlash('error', 'Vous devez vous connecter pour voir une Vidéo Prémium !');
+                return $this->redirectToRoute('app_login');
+            }
+            /** @var User $user */
+            $user = $this->getUser();
+            if (!$user->isVerified()) {
+                $this->addFlash('error', 'Vous devez confirmer votre email pour voir une Vidéo Prémium !');
+                return $this->redirectToRoute('app_home');
+            }
+        }
+
         return $this->render('video/show.html.twig', [
             'video' => $video
         ]);
