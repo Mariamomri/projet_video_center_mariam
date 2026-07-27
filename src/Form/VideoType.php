@@ -9,6 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
 class VideoType extends AbstractType
 {
@@ -23,6 +24,10 @@ class VideoType extends AbstractType
             ])
             ->add('descritpion', TextareaType::class, [
                 'label' => 'Description'
+            ])
+            ->add('premiumVideo', CheckboxType::class, [
+                'label' => 'Vidéo Réservée aux Membres',
+                'required' => false
             ])
             ->add('save', SubmitType::class, [
                 'label' => 'Enregistrer'
