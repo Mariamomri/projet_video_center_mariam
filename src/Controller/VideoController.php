@@ -15,9 +15,9 @@ use App\Entity\User;
 final class VideoController extends AbstractController
 {
     #[Route(path: "/", name: "app_home")]
-    public function index(VideoRepository $repository): Response
+    public function index(VideoRepository $repository, Request $request): Response
     {
-        $videos = $repository->findAll();
+        $videos = $repository->findVideos($request->query->getInt('page', 1));
 
         return $this->render('video/index.html.twig', [
             'videos' => $videos
