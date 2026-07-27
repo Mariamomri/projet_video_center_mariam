@@ -9,7 +9,7 @@
 
     <p>{{ video.descritpion }}</p>
 
-    <p>Publié le {{ video.createdAt|date('d/m/Y H:i') }}</p>
+    <p>Publié le {{ video.createdAt|date('d/m/Y H:i') }} par {{ video.user.firstname }} {{ video.user.lastname }}</p>
 
     <a href="{{ path('app_video_edit', {id: video.id}) }}">Éditer</a>
     <a href="{{ path('app_video_delete', {id: video.id}) }}">Supprimer</a>
