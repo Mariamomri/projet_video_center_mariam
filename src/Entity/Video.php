@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Entity\Traits\Timestampable;
 use App\Repository\VideoRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
@@ -22,6 +23,8 @@ class Video
 
     #[ORM\Column(type: Types::TEXT)]
     private ?string $descritpion = null;
+
+    use Timestampable;
 
     public function getId(): ?int
     {
