@@ -35,6 +35,10 @@ class Video
     #[InappropriateWords(listWords: ['callypige'])]
     private ?string $descritpion = null;
 
+    #[ORM\ManyToOne(inversedBy: 'videos')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?User $user = null;
+
     use Timestampable;
 
     public function getId(): ?int
@@ -74,6 +78,18 @@ class Video
     public function setDescritpion(string $descritpion): static
     {
         $this->descritpion = $descritpion;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): static
+    {
+        $this->user = $user;
 
         return $this;
     }
