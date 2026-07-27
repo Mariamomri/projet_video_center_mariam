@@ -7,7 +7,7 @@ use Symfony\Component\Validator\ConstraintValidator;
 
 final class InappropriateWordsValidator extends ConstraintValidator
 {
-    public function validate(mixed $value, Constraint $constraint): void
+    public function validate($value, Constraint $constraint)
     {
         /* @var InappropriateWords $constraint */
 
@@ -15,10 +15,13 @@ final class InappropriateWordsValidator extends ConstraintValidator
             return;
         }
 
-        // TODO: implement the validation here
-        $this->context->buildViolation($constraint->message)
-            ->setParameter('{{ value }}', $value)
-            ->addViolation()
-        ;
+        $value = strtolower($value);
+        foreach ($constraint->listWords as $inappropriateWord) {
+            if (str_contains($value, $inappropriateWord)) {
+                $this->context->buildViolation($constraint->message)
+                    ->setParameter('{{ inappropriateWord }}', $inappropriateWord)
+                    ->addViolation();
+            }
+        }
     }
 }
