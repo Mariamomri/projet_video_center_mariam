@@ -1,0 +1,35 @@
+navBar.home: Accueil
+navBar.createVideo: Créer vidéo
+navBar.logout: Se déconnecter
+navBar.register: "S'inscrire"
+navBar.login: Se connecter
+registerTemplate.title: Créer un compte
+registerTemplate.button: "S'inscrire"
+resetPassword.emailSentTitle: Email de réinitialisation envoyé
+resetPassword.emailSentText: "Si un compte correspondant à votre email existe, un email vient de vous être envoyé avec un lien pour réinitialiser votre mot de passe. Ce lien expirera dans"
+resetPassword.checkSpam: "Si vous ne recevez pas d'email, vérifiez vos spams ou"
+resetPassword.tryAgain: réessayez
+resetPasswordEmail.greeting: Bonjour !
+resetPasswordEmail.instructions: "Pour réinitialiser votre mot de passe, veuillez visiter le lien suivant"
+resetPasswordEmail.expires: Ce lien expirera dans
+resetPasswordEmail.cheers: Cordialement !
+resetPassword.title: Réinitialiser votre mot de passe
+resetPassword.instructions: "Saisissez votre adresse email, nous vous enverrons un lien pour réinitialiser votre mot de passe."
+resetPassword.send: Envoyer le lien de réinitialisation
+resetPassword.submit: Réinitialiser le mot de passe
+loginTemplate.title: Se connecter
+loginTemplate.email: Email
+loginTemplate.password: Mot de passe
+loginTemplate.forgotPassword: Mot de passe oublié ?
+loginTemplate.submit: Se connecter
+loginTemplate.notRegistered: Pas encore enregistré ?
+loginTemplate.createAccount: Créer un compte
+videoCreateTemplate.title: Ajout d'une vidéo
+videoTemplate.back: Retour
+videoEditTemplate.title: Édition d'une vidéo
+homeTemplate.title: Bienvenue dans Vidéo Center
+homeTemplate.resultsFound: "vidéo(s) trouvé(s) avec le terme"
+videoTemplate.by: Par
+videoTemplate.publishedOn: Publié le
+videoTemplate.edit: Éditer
+videoTemplate.delete: Supprimer
