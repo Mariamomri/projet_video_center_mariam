@@ -5,6 +5,16 @@
 {% block body %}
     <h1>{{ 'homeTemplate.title' | trans }}</h1>
 
+    {% if app.user %}
+        {% include "/layouts/partials/_search_data.html.twig" with {
+            form: form
+        } only %}
+
+        {% if app.request.query.get('q') is not empty %}
+            <p class="text-center">{{ videos.getTotalItemCount }} {{ 'homeTemplate.resultsFound' | trans }} "{{ app.request.query.get('q') }}"</p>
+        {% endif %}
+    {% endif %}
+
     {% for video in videos %}
         <div>
             <a href="{{ path('app_video_show', {id: video.id}) }}">
