@@ -1,0 +1,35 @@
+navBar.home: Home
+navBar.createVideo: Create video
+navBar.logout: Logout
+navBar.register: Register
+navBar.login: Login
+registerTemplate.title: Create an account
+registerTemplate.button: Register
+resetPassword.emailSentTitle: Password reset email sent
+resetPassword.emailSentText: "If an account matching your email exists, an email was just sent with a link to reset your password. This link will expire in"
+resetPassword.checkSpam: "If you don't receive an email, check your spam folder or"
+resetPassword.tryAgain: try again
+resetPasswordEmail.greeting: Hi!
+resetPasswordEmail.instructions: "To reset your password, please visit the following link"
+resetPasswordEmail.expires: This link will expire in
+resetPasswordEmail.cheers: Cheers!
+resetPassword.title: Reset your password
+resetPassword.instructions: "Enter your email address, and we will send you a link to reset your password."
+resetPassword.send: Send password reset email
+resetPassword.submit: Reset password
+loginTemplate.title: Login
+loginTemplate.email: Email
+loginTemplate.password: Password
+loginTemplate.forgotPassword: Forgot password?
+loginTemplate.submit: Login
+loginTemplate.notRegistered: Not registered yet?
+loginTemplate.createAccount: Create an account
+videoCreateTemplate.title: Add a video
+videoTemplate.back: Back
+videoEditTemplate.title: Edit a video
+homeTemplate.title: Welcome to Vidéo Center
+homeTemplate.resultsFound: "video(s) found with the term"
+videoTemplate.by: By
+videoTemplate.publishedOn: Published on
+videoTemplate.edit: Edit
+videoTemplate.delete: Delete
