@@ -17,20 +17,20 @@ class VideoType extends AbstractType
     {
         $builder
             ->add('title', TextType::class, [
-                'label' => 'Titre'
+                'label' => 'videoForm.title'
             ])
             ->add('videoLink', TextType::class, [
-                'label' => 'Lien Vidéo'
+                'label' => 'videoForm.videoLink'
             ])
             ->add('descritpion', TextareaType::class, [
-                'label' => 'Description'
+                'label' => 'videoForm.descritpion'
             ])
             ->add('premiumVideo', CheckboxType::class, [
-                'label' => 'Vidéo Réservée aux Membres',
+                'label' => 'videoForm.premiumVideo',
                 'required' => false
             ])
             ->add('save', SubmitType::class, [
-                'label' => 'Enregistrer'
+                'label' => 'videoForm.save'
             ])
         ;
     }

@@ -38,3 +38,8 @@ registerForm.lastname: Nom
 registerForm.email: Email
 registerForm.plainPassword: Mot de passe
 registerForm.agreeTerms: Accepter les termes
+videoForm.title: Titre
+videoForm.videoLink: Lien Vidéo
+videoForm.descritpion: Description
+videoForm.premiumVideo: Vidéo Réservée aux Membres
+videoForm.save: Enregistrer
