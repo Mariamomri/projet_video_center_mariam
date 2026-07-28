@@ -43,3 +43,6 @@ videoForm.videoLink: Video Link
 videoForm.descritpion: Description
 videoForm.premiumVideo: Members-Only Video
 videoForm.save: Save
+"You must login to create Video !": "You must login to create Video !"
+"You must login to view a Premium Video !": "You must login to view a Premium Video !"
+"You must confirm your email to view a Premium Video !": "You must confirm your email to view a Premium Video !"

@@ -13,6 +13,7 @@ use Symfony\Component\Routing\Attribute\Route;
 use App\Entity\User;
 use App\Form\SearchType;
 use App\Model\SearchData;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 final class VideoController extends AbstractController
 {
@@ -42,17 +43,17 @@ final class VideoController extends AbstractController
     }
 
     #[Route(path: "/video/{id}", name: "app_video_show", requirements: ['id' => '\d+'])]
-    public function show(Video $video): Response
+    public function show(Video $video, TranslatorInterface $translator): Response
     {
         if ($video->isPremiumVideo()) {
             if (!$this->getUser()) {
-                $this->addFlash('error', 'Vous devez vous connecter pour voir une Vidéo Prémium !');
+                $this->addFlash('error', $translator->trans('You must login to view a Premium Video !'));
                 return $this->redirectToRoute('app_login');
             }
             /** @var User $user */
             $user = $this->getUser();
             if (!$user->isVerified()) {
-                $this->addFlash('error', 'Vous devez confirmer votre email pour voir une Vidéo Prémium !');
+                $this->addFlash('error',  $translator->trans('You must confirm your email to view a Premium Video !'));
                 return $this->redirectToRoute('app_home');
             }
         }
@@ -82,10 +83,10 @@ final class VideoController extends AbstractController
 
 
     #[Route(path: '/video/create', name: 'app_video_create')]
-    public function create(Request $request, EntityManagerInterface $em): Response
+    public function create(Request $request, EntityManagerInterface $em, TranslatorInterface $translator): Response
     {
         if (!$this->getUser()) {
-            $this->addFlash('error', 'Vous devez vous connecter pour créer une vidéo !');
+            $this->addFlash('error', $translator->trans('You must login to create Video !'));
             return $this->redirectToRoute('app_login');
         }
 
