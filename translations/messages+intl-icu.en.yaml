@@ -46,3 +46,6 @@ videoForm.save: Save
 "You must login to create Video !": "You must login to create Video !"
 "You must login to view a Premium Video !": "You must login to view a Premium Video !"
 "You must confirm your email to view a Premium Video !": "You must confirm your email to view a Premium Video !"
+"You are already logged in !": "You are already logged in !"
+"Your account was successfully created ! Check your emails to confirm your registration.": "Your account was successfully created ! Check your emails to confirm your registration."
+"Your email address has been verified !": "Your email address has been verified !"

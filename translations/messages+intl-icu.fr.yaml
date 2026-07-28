@@ -46,3 +46,6 @@ videoForm.save: Enregistrer
 "You must login to create Video !": "Vous devez vous connecter pour créer une vidéo !"
 "You must login to view a Premium Video !": "Vous devez vous connecter pour voir une Vidéo Prémium !"
 "You must confirm your email to view a Premium Video !": "Vous devez confirmer votre email pour voir une Vidéo Prémium !"
+"You are already logged in !": "Vous êtes déjà connecté !"
+"Your account was successfully created ! Check your emails to confirm your registration.": "Votre compte a été créé avec succès ! Vérifiez vos emails pour confirmer votre inscription."
+"Your email address has been verified !": "Votre adresse email a bien été vérifiée !"
