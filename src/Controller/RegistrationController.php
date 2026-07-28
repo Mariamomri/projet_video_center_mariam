@@ -21,10 +21,10 @@ class RegistrationController extends AbstractController
     public function __construct(private EmailVerifier $emailVerifier) {}
 
     #[Route('/register', name: 'app_register')]
-    public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, EntityManagerInterface $entityManager): Response
+    public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, EntityManagerInterface $entityManager, TranslatorInterface $translator): Response
     {
         if ($this->getUser()) {
-            $this->addFlash('error', 'Vous êtes déjà connecté !');
+            $this->addFlash('error',  $translator->trans('You are already logged in !'));
             return $this->redirectToRoute('app_home');
         }
 
@@ -55,7 +55,7 @@ class RegistrationController extends AbstractController
 
             // do anything else you need here, like send an email
 
-            $this->addFlash('success', 'Votre compte a été créé avec succès ! Vérifiez vos emails pour confirmer votre inscription.');
+            $this->addFlash('success', $translator->trans('Your account was successfully created ! Check your emails to confirm your registration.'));
 
             return $this->redirectToRoute('app_login');
         }
@@ -82,7 +82,7 @@ class RegistrationController extends AbstractController
         }
 
         // @TODO Change the redirect on success and handle or remove the flash message in your templates
-        $this->addFlash('info', 'Votre adresse email a bien été vérifiée !');
+        $this->addFlash('info', $translator->trans('Your email address has been verified !'));
 
         return $this->redirectToRoute('app_home');
     }
