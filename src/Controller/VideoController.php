@@ -11,15 +11,32 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Attribute\Route;
 use App\Entity\User;
+use App\Form\SearchType;
+use App\Model\SearchData;
 
 final class VideoController extends AbstractController
 {
     #[Route(path: "/", name: "app_home")]
     public function index(VideoRepository $repository, Request $request): Response
     {
+        $searchData = new SearchData();
+        $form = $this->createForm(SearchType::class, $searchData);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $searchData->page = $request->query->getInt('page', 1);
+            $videos = $repository->findBySearch($searchData);
+
+            return $this->render('video/index.html.twig', [
+                'form' => $form,
+                'videos' => $videos
+            ]);
+        }
+
         $videos = $repository->findVideos($request->query->getInt('page', 1));
 
         return $this->render('video/index.html.twig', [
+            'form' => $form,
             'videos' => $videos
         ]);
     }
