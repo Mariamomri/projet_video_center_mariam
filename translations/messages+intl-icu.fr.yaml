@@ -33,3 +33,8 @@ videoTemplate.by: Par
 videoTemplate.publishedOn: Publié le
 videoTemplate.edit: Éditer
 videoTemplate.delete: Supprimer
+registerForm.firstname: Prénom
+registerForm.lastname: Nom
+registerForm.email: Email
+registerForm.plainPassword: Mot de passe
+registerForm.agreeTerms: Accepter les termes
