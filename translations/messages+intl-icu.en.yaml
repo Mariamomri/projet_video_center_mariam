@@ -49,3 +49,15 @@ videoForm.save: Save
 "You are already logged in !": "You are already logged in !"
 "Your account was successfully created ! Check your emails to confirm your registration.": "Your account was successfully created ! Check your emails to confirm your registration."
 "Your email address has been verified !": "Your email address has been verified !"
+accountShow.profile: My Profile
+accountShow.Accountcreatedon: "Account created on"
+accountShow.EditAccount: "Edit your profile"
+accountShow.myVideos: "My videos"
+userForm.firstname: First name
+userForm.lastname: Last name
+"Update Profile": "Update Profile"
+"Apply changes": "Apply changes"
+"Account successfuly updated !": "Account successfully updated !"
+"You must login to see your account !": "You must login to see your account !"
+"You must login to edit your account !": "You must login to edit your account !"
+navBar.account: "My Profile"
