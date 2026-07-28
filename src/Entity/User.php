@@ -74,7 +74,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     // NOTE: This field and the next one need to be nullable, otherwise the deletion won't work
     //       if you want non-nullable fields, set the "erase_fields" option to false in the mapping config
     #[ORM\Column(nullable: true)]
-    private ?string $imageName = "a-token.jpg";
+    private ?string $imageName = "default.jpg";
 
     #[ORM\Column(nullable: true)]
     private ?int $imageSize = null;
