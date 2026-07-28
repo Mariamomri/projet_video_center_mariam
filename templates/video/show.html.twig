@@ -3,15 +3,27 @@
 {% block title %}{{ video.title }}{% endblock %}
 
 {% block body %}
-    <h1>{{ video.title }}</h1>
+<div class="row">
+	<div align="center" class="col-md-6 mx-auto">
+		<article>
+            <h1>{{ video.title }}</h1>
 
-    <iframe width="640" height="480" src="{{ video.videoLink }}"></iframe>
+            <iframe width="640" height="480" src="{{ video.videoLink }}"></iframe>
 
-    <p>{{ video.descritpion }}</p>
+            <p>{{ video.descritpion }}</p>
 
-    <p>{{ 'videoTemplate.publishedOn' | trans }} {{ video.createdAt|date('d/m/Y H:i') }} {{ 'videoTemplate.by' | trans }} {{ video.user.firstname }} {{ video.user.lastname }}</p>
-
-    <a href="{{ path('app_video_edit', {id: video.id}) }}">{{ 'videoTemplate.edit' | trans }}</a>
-    <a href="{{ path('app_video_delete', {id: video.id}) }}">{{ 'videoTemplate.delete' | trans }}</a>
-    <a href="{{ path('app_home') }}">{{ 'videoTemplate.back' | trans }}</a>
+            <small>
+                <p>{{ 'videoTemplate.publishedOn' | trans }} {{ video.createdAt|date('d/m/Y H:i') }}</p>
+                <p>{{ 'videoTemplate.by' | trans }} {{ video.user.firstname ~ " " ~ video.user.lastname }}</p>
+            </small>
+        </article>
+        <div>
+            {% if app.user and app.user.email is same as (video.user.email) %}
+                <a class="btn btn-primary btn-sm" href="{{ path('app_video_edit', {id: video.id}) }}">{{ 'videoTemplate.edit' | trans }}</a>
+                <a class="btn btn-danger btn-sm" href="{{ path('app_video_delete', {id: video.id}) }}" onclick="return confirm('{{ 'videoTemplate.confirmDelete' | trans }}')">{{ 'videoTemplate.delete' | trans }}</a>
+            {% endif %}
+            <a class="btn btn-secondary btn-sm" href="{{ path('app_home') }}">{{ 'videoTemplate.back' | trans }}</a>
+        </div>
+    </div>
+</div>
 {% endblock %}
