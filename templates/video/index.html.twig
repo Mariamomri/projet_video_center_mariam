@@ -16,6 +16,7 @@
     {% endif %}
 
     {% for video in videos %}
+    {% if not video.premiumVideo or (app.user and app.user.isVerified) %}
         <div>
             <a href="{{ path('app_video_show', {id: video.id}) }}">
                 <h3>{{ video.title|slice(0, 20) }}</h3>
@@ -25,7 +26,8 @@
             <p>{{ 'videoTemplate.by' | trans }} {{ video.user.firstname }} {{ video.user.lastname }}</p>
             <p>{{ video.createdAt|ago }}</p>
         </div>
-    {% endfor %}
+    {% endif %}
+{% endfor %}
 
     <div class="navigation d-flex justify-content-center mb-4">
     {{ knp_pagination_render(videos) }}
