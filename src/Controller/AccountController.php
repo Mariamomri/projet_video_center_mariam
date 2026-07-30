@@ -13,10 +13,10 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 final class AccountController extends AbstractController
 {
     #[Route('/account', name: 'app_account')]
-    public function show(): Response
+    public function show(TranslatorInterface $translator): Response
     {
         if (!$this->getUser()) {
-            $this->addFlash('error', 'You must login to see your account !');
+            $this->addFlash('error', $translator->trans('You must login to see your account !'));
             return $this->redirectToRoute('app_login');
         }
         return $this->render('account/show.html.twig');
@@ -26,7 +26,7 @@ final class AccountController extends AbstractController
     public function edit(Request $request, EntityManagerInterface $em, TranslatorInterface $translator): Response
     {
         if (!$this->getUser()) {
-            $this->addFlash('error', 'You must login to edit your account !');
+            $this->addFlash('error', $translator->trans('You must login to edit your account !'));
             return $this->redirectToRoute('app_login');
         }
         $user = $this->getUser();

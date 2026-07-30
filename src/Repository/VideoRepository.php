@@ -27,11 +27,14 @@ class VideoRepository extends ServiceEntityRepository
      */
 
 
-    public function findVideos(int $page): PaginationInterface
+    public function findVideos(int $page, bool $canSeePremium): PaginationInterface
     {
-        $data = $this->createQueryBuilder('v')
-            ->getQuery()
-            ->getResult();
+        $qb = $data = $this->createQueryBuilder('v');
+        if (!$canSeePremium) {
+            $qb->andWhere('v.premiumVideo = false');
+        }
+
+        $data = $qb->getQuery()->getResult();
 
         $videos = $this->paginatorInterface->paginate($data, $page, 9);
         return $videos;
@@ -43,7 +46,7 @@ class VideoRepository extends ServiceEntityRepository
      * @param SearchData $searchData
      * @return PaginationInterface
      */
-    public function findBySearch(SearchData $searchData): PaginationInterface
+    public function findBySearch(SearchData $searchData, bool $canSeePremium): PaginationInterface
     {
         $data = $this->createQueryBuilder('v');
 
@@ -53,9 +56,11 @@ class VideoRepository extends ServiceEntityRepository
                 ->setParameter('q', "%{$searchData->q}%");
         }
 
-        $data = $data
-            ->getQuery()
-            ->getResult();
+        if (!$canSeePremium) {
+            $data = $data
+                ->getQuery()
+                ->getResult();
+        }
 
         $videos = $this->paginatorInterface->paginate($data, $searchData->page, 6);
         return $videos;

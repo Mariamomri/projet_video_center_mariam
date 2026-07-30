@@ -34,7 +34,10 @@ final class VideoController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $searchData->page = $request->query->getInt('page', 1);
-            $videos = $repository->findBySearch($searchData);
+            /** @var User|null $user */
+            $user = $this->getUser();
+            $canSeePremium = $user && $user->isVerified();
+            $videos = $repository->findBySearch($searchData, $canSeePremium);
 
             return $this->render('video/index.html.twig', [
                 'form' => $form->createView(),
@@ -42,7 +45,10 @@ final class VideoController extends AbstractController
             ]);
         }
 
-        $videos = $repository->findVideos($request->query->getInt('page', 1));
+        /** @var User|null $user */
+        $user = $this->getUser();
+        $canSeePremium = $user && $user->isVerified();
+        $videos = $repository->findVideos($request->query->getInt('page', 1), $canSeePremium);
 
         return $this->render('video/index.html.twig', [
             'form' => $form->createView(),
