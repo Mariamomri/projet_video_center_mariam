@@ -68,7 +68,7 @@
             }
         });
 
-    window.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("turbo:load", () => {
         showActiveTheme(getPreferredTheme());
 
         document.querySelectorAll("[data-bs-theme-value]").forEach((toggle) => {

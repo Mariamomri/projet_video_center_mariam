@@ -1,5 +1,6 @@
 import "./stimulus_bootstrap.js";
 import "./theme-toggle.js";
+import "./sidebar-animation.js";
 /*
  * Welcome to your app's main JavaScript file!
  *

@@ -36,7 +36,30 @@
         {% endif %}
     {% endif %}
 
-
+    {# sidebar #}
+    <div class="content-with-sidebar">
+        <aside class="site-sidebar" id="site-sidebar">
+            <h4>{{ 'sidebar.about' | trans }}</h4>
+            <p class="sidebar-intro">{{ 'sidebar.aboutText' | trans }}</p>
+            <h4>{{ 'sidebar.howItWorks' | trans }}</h4>
+            <div class="sidebar-item">
+                <span class="icon">1. </span>
+                <p>{{ 'sidebar.step1' | trans }}</p>
+            </div>
+            <div class="sidebar-item">
+                <span class="icon">2 .</span>
+                <p>{{ 'sidebar.step2' | trans }}</p>
+            </div>
+            <div class="sidebar-item">
+                <span class="icon">3 .</span>
+                <p>{{ 'sidebar.step3' | trans }}</p>
+            </div>
+            <div class="sidebar-item">
+                <span class="icon">4 .</span>
+                <p>{{ 'sidebar.step4' | trans }}</p>
+            </div>
+        </aside>
+        
     {# grid #}
     <div class="video-grid">
     {% for video in videos %}
@@ -50,6 +73,7 @@
             <p>{{ video.createdAt|ago }}</p>
         </div>
     {% endfor %}
+    </div>
     </div>
 
     <div class="navigation d-flex justify-content-center mb-4">
