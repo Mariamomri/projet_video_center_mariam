@@ -3,31 +3,29 @@
 {% block title %}{{ 'homeTemplate.title' | trans }}{% endblock %}
 
 {% block body %}
-    <h1>{{ 'homeTemplate.title' | trans }}</h1>
 
+    {# title #}
+    <h1 class="titolo">{{ 'homeTemplate.title' | trans }}</h1>
+
+    <!-- 3D Slideshow Section --> 
     {% if videos|length > 0 %}
-    <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            {% for video in videos|slice(0, 3) %}
-                <div class="carousel-item {{ loop.first ? 'active' : '' }}">
-                    <a href="{{ path('app_video_show', {id: video.id}) }}">
-                        <img src="https://img.youtube.com/vi/{{ video.videoLink|split('/')|last }}/hqdefault.jpg" class="d-block w-100" alt="{{ video.title }}">
-                        <div class="carousel-caption">
-                            <h3>{{ video.title }}</h3>
-                        </div>
-                    </a>
-                </div>
-            {% endfor %}
+    <section id="slideshow">
+        <div class="entire-content">
+            <div class="content-carrousel">
+                {% for video in videos|slice(0, 9) %}
+                    <figure class="shadow">
+                        <a href="{{ path('app_video_show', {id: video.id}) }}">
+                            <img src="https://img.youtube.com/vi/{{ video.videoLink|split('/')|last }}/hqdefault.jpg" alt="{{ video.title }}">
+                        </a>
+                    </figure>
+                {% endfor %}
+            </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </button>
-    </div>
+    </section>
     {% endif %}
 
+
+    {# searchbar #}
     {% if app.user %}
         {% include "/layouts/partials/_search_data.html.twig" with {
             form: form
@@ -39,6 +37,7 @@
     {% endif %}
 
 
+    {# grid #}
     <div class="video-grid">
     {% for video in videos %}
         <div class="video-card">
