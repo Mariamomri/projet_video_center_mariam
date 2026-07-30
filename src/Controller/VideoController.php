@@ -139,8 +139,12 @@ final class VideoController extends AbstractController
     }
 
     #[Route(path: '/video/{id}/delete', name: 'app_video_delete', requirements: ['id' => '\d+'])]
-    public function delete(Video $video, EntityManagerInterface $em, TranslatorInterface $translator): Response
+    public function delete(Video $video, EntityManagerInterface $em, TranslatorInterface $translator,  Request $request): Response
     {
+        if (!$this->isCsrfTokenValid('delete' . $video->getId(), $request->getPayload()->getString('_token'))) {
+            return $this->redirectToRoute('app_home');
+        }
+
         if ($this->getUser()) {
             /** @var User */
             $user = $this->getUser();
