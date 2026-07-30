@@ -72,3 +72,4 @@ videoController.index.emailNotVerified: "You must confirm your email to create/e
 "You must confirm your email to delete Video !": "You must confirm your email to delete Video !"
 " to delete this video": " to delete this video"
 " was successfully deleted !": " was successfully deleted !"
+"Welcome ": "Bienvenue "
