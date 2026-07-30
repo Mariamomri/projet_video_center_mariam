@@ -57,10 +57,12 @@ class VideoRepository extends ServiceEntityRepository
         }
 
         if (!$canSeePremium) {
-            $data = $data
-                ->getQuery()
-                ->getResult();
+            $data = $data->andWhere('v.premiumVideo = false');
         }
+
+        $data = $data
+            ->getQuery()
+            ->getResult();
 
         $videos = $this->paginatorInterface->paginate($data, $searchData->page, 6);
         return $videos;

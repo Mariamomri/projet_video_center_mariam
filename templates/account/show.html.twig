@@ -19,9 +19,9 @@
     </div>
 
     <h2 class="text-center my-4">{{ 'accountShow.myVideos'|trans }}</h2>
-    <div class="d-flex flex-wrap justify-content-center gap-3">
+    <div class="video-grid">
         {% for video in app.user.videos %}
-            <div style="width: 300px;">
+            <div class="video-card>
                 <a href="{{ path('app_video_show', {id: video.id}) }}">
                     <h5>{{ video.title|slice(0, 20) }}</h5>
                     <iframe width="300" height="200" src="{{ video.videoLink }}"></iframe>

@@ -5,6 +5,29 @@
 {% block body %}
     <h1>{{ 'homeTemplate.title' | trans }}</h1>
 
+    {% if videos|length > 0 %}
+    <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            {% for video in videos|slice(0, 3) %}
+                <div class="carousel-item {{ loop.first ? 'active' : '' }}">
+                    <a href="{{ path('app_video_show', {id: video.id}) }}">
+                        <img src="https://img.youtube.com/vi/{{ video.videoLink|split('/')|last }}/hqdefault.jpg" class="d-block w-100" alt="{{ video.title }}">
+                        <div class="carousel-caption">
+                            <h3>{{ video.title }}</h3>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    {% endif %}
+
     {% if app.user %}
         {% include "/layouts/partials/_search_data.html.twig" with {
             form: form
@@ -15,8 +38,10 @@
         {% endif %}
     {% endif %}
 
+
+    <div class="video-grid">
     {% for video in videos %}
-        <div>
+        <div class="video-card">
             <a href="{{ path('app_video_show', {id: video.id}) }}">
                 <h3>{{ video.title|slice(0, 20) }}</h3>
                 <iframe width="300" height="200" src="{{ video.videoLink }}"></iframe>
@@ -25,7 +50,8 @@
             <p>{{ 'videoTemplate.by' | trans }} {{ video.user.firstname }} {{ video.user.lastname }}</p>
             <p>{{ video.createdAt|ago }}</p>
         </div>
-{% endfor %}
+    {% endfor %}
+    </div>
 
     <div class="navigation d-flex justify-content-center mb-4">
     {{ knp_pagination_render(videos) }}
