@@ -5,7 +5,7 @@
 {% block body %}
 
     {# title #}
-    <h1 class="titolo">{{ 'homeTemplate.title' | trans }}</h1>
+    <h1 class="titolo" id="page-title">{{ 'homeTemplate.title' | trans }}</h1>
 
     <!-- 3D Slideshow Section --> 
     {% if videos|length > 0 %}
@@ -39,9 +39,9 @@
     {# sidebar #}
     <div class="content-with-sidebar">
         <aside class="site-sidebar" id="site-sidebar">
-            <h4>{{ 'sidebar.about' | trans }}</h4>
+            <h2>{{ 'sidebar.about' | trans }}</h2>
             <p class="sidebar-intro">{{ 'sidebar.aboutText' | trans }}</p>
-            <h4>{{ 'sidebar.howItWorks' | trans }}</h4>
+            <h2>{{ 'sidebar.howItWorks' | trans }}</h2>
             <div class="sidebar-item">
                 <span class="icon">1. </span>
                 <p>{{ 'sidebar.step1' | trans }}</p>
@@ -58,6 +58,7 @@
                 <span class="icon">4 .</span>
                 <p>{{ 'sidebar.step4' | trans }}</p>
             </div>
+            <img src="{{ asset('images/videoside.gif') }}" alt="Vidéo Center" class="sidebar-gif">
         </aside>
         
     {# grid #}
@@ -75,7 +76,7 @@
     {% endfor %}
     </div>
     </div>
-
+    <br><br>
     <div class="navigation d-flex justify-content-center mb-4">
     {{ knp_pagination_render(videos) }}
     </div>

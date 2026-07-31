@@ -130,7 +130,7 @@ a:hover {
     font-size: 3rem;
     font-weight: 700;
     letter-spacing: 1px;
-    margin: 40px 0;
+    margin-top: 50px;
     background: linear-gradient(90deg, var(--cyan), var(--pink));
     -webkit-background-clip: text;
     background-clip: text;
@@ -144,8 +144,7 @@ a:hover {
 #slideshow {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
-    margin-bottom: 40px;
-    padding: 40px 0;
+    margin-bottom: 20px;
     height: 400px;
     background-color: transparent;
     overflow: hidden;
@@ -299,19 +298,20 @@ form textarea {
     padding: 24px;
 }
 
-.site-sidebar h4 {
+.site-sidebar h2 {
     color: var(--cyan);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 16px;
 }
 
 .site-sidebar .sidebar-intro {
     color: var(--text-muted);
-    font-size: 0.85rem;
+    font-size: 1.2rem;
     line-height: 1.5;
     margin-bottom: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid var(--border);
+    text-align: justify;
 }
 
 .site-sidebar .sidebar-item {
@@ -331,7 +331,7 @@ form textarea {
 .site-sidebar .sidebar-item p {
     margin: 0;
     color: var(--text-muted);
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.4;
 }
 
@@ -443,4 +443,34 @@ body {
 
 .page-wrapper>footer {
     flex-shrink: 0;
+}
+
+/* gsap title */
+.Horizontal {
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.Horizontal__text {
+    display: flex;
+    width: max-content;
+    white-space: nowrap;
+    gap: 4vw;
+    padding-left: 100vw;
+}
+
+.heading-xl {
+    font-size: clamp(2rem, 10vw, 12rem);
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+/*gif sidebar*/
+.sidebar-gif {
+    display: block;
+    width: 100%;
+    margin: 10px auto 0;
+    opacity: 0.9;
 }
