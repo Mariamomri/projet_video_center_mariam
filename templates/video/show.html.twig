@@ -29,4 +29,32 @@
         </div>
     </div>
 </div>
+
+<div class="mt-5">
+    <h2>{{ 'commentSection.comments' | trans }}</h2>
+
+    {% if app.user and app.user.isVerified %}
+        <div class="mb-4">
+            {{ form_start(form) }}
+                {{ form_row(form.content) }}
+                <button type="submit" class="btn btn-primary btn-sm mt-2">{{ 'commentForm.postComment' | trans }}</button>
+            {{ form_end(form) }}
+        </div>
+    {% endif %}
+
+    {% for comment in video.comments %}
+        <div class="border rounded p-3 mb-2">
+            <p>{{ comment.content }}</p>
+            <small>{{ comment.author.firstname }} {{ comment.author.lastname }} - {{ comment.createdAt|date('d/m/Y H:i') }}</small>
+
+            {% if app.user and app.user.email is same as (comment.author.email) %}
+                <form method="post" action="{{ path('comment.delete', {id: comment.id}) }}" onsubmit="return confirm('{{ 'commentSection.confirmDelete' | trans }}')" style="display: inline;">
+                    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ comment.id) }}">
+                    <button class="btn btn-link btn-sm text-danger p-0">{{ 'commentSection.delete' | trans }}</button>
+                </form>
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>
+
 {% endblock %}
