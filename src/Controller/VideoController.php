@@ -13,6 +13,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Attribute\Route;
+use App\Entity\Comment;
+use App\Form\CommentType;
 
 use Symfony\Contracts\Translation\TranslatorInterface;
 
@@ -57,7 +59,7 @@ final class VideoController extends AbstractController
     }
 
     #[Route(path: "/video/{id}", name: "app_video_show", requirements: ['id' => '\d+'])]
-    public function show(Video $video, TranslatorInterface $translator): Response
+    public function show(Video $video, TranslatorInterface $translator, Request $request, EntityManagerInterface $em): Response
     {
         if ($video->isPremiumVideo()) {
             if (!$this->getUser()) {
@@ -72,8 +74,37 @@ final class VideoController extends AbstractController
             }
         }
 
+        $comment = new Comment();
+        $comment->setVideo($video);
+        if ($this->getUser()) {
+            $comment->setAuthor($this->getUser());
+        }
+
+        $form = $this->createForm(CommentType::class, $comment);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            if (!$this->getUser()) {
+                $this->addFlash('error', $translator->trans('You must login to comment !'));
+                return $this->redirectToRoute('app_login');
+            }
+            /** @var User */
+            $user = $this->getUser();
+            if (!$user->isVerified()) {
+                $this->addFlash('error', $translator->trans('You must confirm your email to comment !'));
+                return $this->redirectToRoute('app_video_show', ['id' => $video->getId()]);
+            }
+
+            $em->persist($comment);
+            $em->flush();
+
+            $this->addFlash('success', $translator->trans('Your comment was successfully posted.'));
+
+            return $this->redirectToRoute('app_video_show', ['id' => $video->getId()]);
+        }
+
         return $this->render('video/show.html.twig', [
-            "video" => $video
+            "video" => $video,
+            "form" => $form->createView()
         ]);
     }
 
