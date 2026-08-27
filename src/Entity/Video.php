@@ -182,4 +182,14 @@ class Video
 
         return $this;
     }
+
+    public function isLikedByUser(User $user): bool
+    {
+        return $this->likes->contains($user);
+    }
+
+    public function howManyLikes(): int
+    {
+        return count($this->likes);
+    }
 }
