@@ -674,3 +674,44 @@ button.btn-space::after {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+/* video show buttons */
+.video-actions {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+}
+
+.video-actions .btn {
+    border-radius: 8px;
+}
+
+/* comments */
+.comments-section {
+    max-width: 700px;
+    margin: 3rem auto 0;
+}
+
+.comment-form textarea {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text);
+}
+
+.comment-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.comment-card small {
+    color: var(--text-muted);
+}
+
+.comment-delete-btn {
+    color: var(--pink) !important;
+}

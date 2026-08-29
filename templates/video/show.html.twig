@@ -19,7 +19,7 @@
                 <p>{{ 'videoTemplate.by' | trans }} {{ video.user.firstname ~ " " ~ video.user.lastname }}</p>
             </small>
         </article>
-        <div>
+        <div class="video-actions">
             {% if app.user and app.user.email is same as (video.user.email) %}
                 <a class="btn btn-primary btn-sm" href="{{ path('app_video_edit', {id: video.id}) }}">{{ 'videoTemplate.edit' | trans }}</a>
                 <form method="post" action="{{ path('app_video_delete', {id: video.id}) }}" onsubmit="return confirm('{{ 'videoTemplate.confirmDelete' | trans }}')" style="display: inline;">
@@ -32,27 +32,27 @@
     </div>
 </div>
 
-<div class="mt-5">
-    <h2>{{ 'commentSection.comments' | trans }}</h2>
+<div class="comments-section">
+    <h2 class="section-title">{{ 'commentSection.comments' | trans }}</h2>
 
     {% if app.user and app.user.isVerified %}
-        <div class="mb-4">
+        <div class="comment-form mb-4">
             {{ form_start(form) }}
                 {{ form_row(form.content) }}
-                <button type="submit" class="btn btn-primary btn-sm mt-2">{{ 'commentForm.postComment' | trans }}</button>
+                <button type="submit" class="btn btn-space btn-sm mt-2">{{ 'commentForm.postComment' | trans }}</button>
             {{ form_end(form) }}
         </div>
     {% endif %}
 
     {% for comment in video.comments %}
-        <div class="border rounded p-3 mb-2">
+        <div class="comment-card">
             <p>{{ comment.content }}</p>
             <small>{{ comment.author.firstname }} {{ comment.author.lastname }} - {{ comment.createdAt|date('d/m/Y H:i') }}</small>
 
             {% if app.user and app.user.email is same as (comment.author.email) %}
                 <form method="post" action="{{ path('comment.delete', {id: comment.id}) }}" onsubmit="return confirm('{{ 'commentSection.confirmDelete' | trans }}')" style="display: inline;">
                     <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ comment.id) }}">
-                    <button class="btn btn-link btn-sm text-danger p-0">{{ 'commentSection.delete' | trans }}</button>
+                    <button class="btn btn-link btn-sm comment-delete-btn p-0">{{ 'commentSection.delete' | trans }}</button>
                 </form>
             {% endif %}
         </div>
