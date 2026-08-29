@@ -3,7 +3,9 @@
 {% block title %}{{ 'videoEditTemplate.title' | trans }}{% endblock %}
 
 {% block body %}
-    <h1>{{ 'videoEditTemplate.title' | trans }} : {{ video.title }}</h1>
+    <div class="form-card-wrapper">
+        <div class="form-card">
+            <h1>{{ 'videoEditTemplate.title' | trans }} : {{ video.title }}</h1>
 
     {{ form_start(monForm) }}
         {{ form_row(monForm.title) }}
@@ -13,5 +15,9 @@
         {{ form_row(monForm.save) }}
     {{ form_end(monForm) }}
 
-    <a href="{{ path('app_video_show', {id: video.id}) }}">{{ 'videoTemplate.back' | trans }}</a>
+            <div class="form-links">
+                <a href="{{ path('app_video_show', {id: video.id}) }}">{{ 'videoTemplate.back' | trans }}</a>
+            </div>
+        </div>
+    </div>
 {% endblock %}
