@@ -30,7 +30,8 @@ class VideoType extends AbstractType
                 'required' => false
             ])
             ->add('save', SubmitType::class, [
-                'label' => 'videoForm.save'
+                'label' => 'videoForm.save',
+                'attr' => ['class' => 'btn btn-space']
             ])
         ;
     }

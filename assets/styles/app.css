@@ -611,3 +611,23 @@ body {
 .btn-space:hover .btn-space-inner::after {
     width: 100%;
 }
+
+/* fix for buttons without inner span */
+button.btn-space::before,
+button.btn-space::after {
+    z-index: 1;
+}
+
+button.btn-space {
+    isolation: isolate;
+}
+
+button.btn-space::before {
+    right: 0;
+    top: 0;
+}
+
+button.btn-space::after {
+    left: 0;
+    bottom: 0;
+}
