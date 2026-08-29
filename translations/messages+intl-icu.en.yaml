@@ -78,7 +78,7 @@ sidebar.aboutText: "Welcome to Vidéo Center, a full-stack project built with Sy
 sidebar.howItWorks: "How does it work?"
 sidebar.step1: "Watch non-premium videos for free, even without an account."
 sidebar.step2: "Create a free account to unlock premium videos."
-sidebar.step3: "Once logged in, post your own videos in one click."
+sidebar.step3: "Once logged in, post your own videos in one click. You can also comment and like videos."
 sidebar.step4: "Use the search bar to find a specific video."
 commentSection.comments: "Comments"
 commentSection.confirmDelete: "Are you sure you want to delete this comment?"

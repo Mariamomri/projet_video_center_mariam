@@ -8,11 +8,12 @@
     <h1 class="titolo" id="page-title">{{ 'homeTemplate.title' | trans }}</h1>
 
     <!-- 3D Slideshow Section --> 
-    {% if videos|length > 0 %}
+    {% set visibleVideos = videos|filter(v => not v.premiumVideo or (app.user and app.user.isVerified)) %}
+    {% if visibleVideos|length > 0 %}
     <section id="slideshow">
         <div class="entire-content">
             <div class="content-carrousel">
-                {% for video in videos|slice(0, 9) %}
+                {% for video in visibleVideos|slice(0, 9) %}
                     <figure class="shadow">
                         <a href="{{ path('app_video_show', {id: video.id}) }}">
                             <img src="https://img.youtube.com/vi/{{ video.videoLink|split('/')|last }}/hqdefault.jpg" alt="{{ video.title }}">
@@ -64,15 +65,23 @@
     {# grid #}
     <div class="video-grid">
     {% for video in videos %}
-        <div class="video-card">
-            <a href="{{ path('app_video_show', {id: video.id}) }}">
-                <h3>{{ video.title|slice(0, 20) }}</h3>
-                <iframe width="300" height="200" src="{{ video.videoLink }}"></iframe>
-            </a>
-            <p>{{ video.descritpion|slice(0, 25) }}</p>
-            <p>{{ 'videoTemplate.by' | trans }} {{ video.user.firstname }} {{ video.user.lastname }}</p>
-            <p>{{ video.createdAt|ago }}</p>
-        </div>
+        {% if not video.premiumVideo or (app.user and app.user.isVerified) %}
+            <div class="video-card">
+                <a href="{{ path('app_video_show', {id: video.id}) }}">
+                    <h3>
+                        {% if video.premiumVideo %}
+                            <i class="fa-solid fa-star text-warning"></i>
+                        {% endif %}
+                        {{ video.title|slice(0, 20) }}
+                    </h3>
+                    <iframe width="300" height="200" src="{{ video.videoLink }}"></iframe>
+                </a>
+                <p>{{ video.descritpion|slice(0, 25) }}</p>
+                <p>{{ 'videoTemplate.by' | trans }} {{ video.user.firstname }} {{ video.user.lastname }}</p>
+                <p>{{ video.createdAt|ago }}</p>
+                {% include "components/_like.html.twig" with { video: video } only %}
+            </div>
+        {% endif %}
     {% endfor %}
     </div>
     </div>
