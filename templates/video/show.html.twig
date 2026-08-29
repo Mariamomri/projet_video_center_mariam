@@ -12,6 +12,8 @@
 
             <p>{{ video.descritpion }}</p>
 
+            {% include "components/_like.html.twig" with { video: video } only %}
+
             <small>
                 <p>{{ 'videoTemplate.publishedOn' | trans }} {{ video.createdAt|date('d/m/Y H:i') }}</p>
                 <p>{{ 'videoTemplate.by' | trans }} {{ video.user.firstname ~ " " ~ video.user.lastname }}</p>
