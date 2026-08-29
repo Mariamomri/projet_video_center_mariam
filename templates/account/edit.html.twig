@@ -3,9 +3,9 @@
 {% block title 'Update Profile' %}
 
 {% block body %}
-<div class="row">
-    <div class="col-md-6 mx-auto text-center">
-        <h1 class="text-center my-5">{{ 'Update Profile'|trans }}</h1>
+    <div class="form-card-wrapper">
+        <div class="form-card">
+        <h1>{{ 'Update Profile'|trans }}</h1>
 
         {{ form_start(userForm) }}
 
@@ -17,13 +17,11 @@
 
         <br>
 
-        <p>
-            <button type="submit" class="btn btn-primary">
-                {{ 'Apply changes'|trans }}
-            </button>
-        </p>
+        <button type="submit" class="btn btn-space">
+            {{ 'Apply changes'|trans }}
+        </button>
 
         {{ form_end(userForm) }}
+        </div>
     </div>
-</div>
 {% endblock %}
