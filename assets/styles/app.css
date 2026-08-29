@@ -535,3 +535,79 @@ body {
     margin-top: 1.25rem;
     font-size: 0.9rem;
 }
+
+/* buttone neon */
+.btn-space {
+    --btn-border-color: var(--cyan);
+    --btn-border-width: 2px;
+    position: relative;
+    overflow: visible;
+    border: none;
+    text-decoration: none;
+    box-shadow: 0 0 5px rgba(0, 240, 255, 0.4);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.btn-space:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 12px rgba(0, 240, 255, 0.5);
+}
+
+.btn-space::before,
+.btn-space::after {
+    content: "";
+    position: absolute;
+    width: var(--btn-border-width);
+    height: 0%;
+    background: var(--btn-border-color);
+    box-shadow: 0 0 8px var(--btn-border-color);
+    transition: height 500ms ease;
+}
+
+.btn-space::before {
+    right: 0;
+    top: 0;
+}
+
+.btn-space::after {
+    left: 0;
+    bottom: 0;
+}
+
+.btn-space:hover::before,
+.btn-space:hover::after {
+    height: 100%;
+}
+
+.btn-space-inner {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-space-inner::before,
+.btn-space-inner::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: var(--btn-border-width, 2px);
+    background: var(--btn-border-color, var(--cyan));
+    box-shadow: 0 0 8px var(--btn-border-color, var(--cyan));
+    transition: width 500ms ease;
+}
+
+.btn-space-inner::before {
+    left: 0;
+    top: 0;
+}
+
+.btn-space-inner::after {
+    right: 0;
+    bottom: 0;
+}
+
+.btn-space:hover .btn-space-inner::before,
+.btn-space:hover .btn-space-inner::after {
+    width: 100%;
+}
