@@ -3,8 +3,8 @@
 {% block title %}{{ 'registerTemplate.title' | trans }}{% endblock %}
 
 {% block body %}
-    <div class="row">
-        <div class="col-md-6 mx-auto">
+    <div class="form-card-wrapper">
+        <div class="form-card">
             {% for flash_error in app.flashes('verify_email_error') %}
                 <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
             {% endfor %}
@@ -18,7 +18,7 @@
                 {{ form_row(registrationForm.plainPassword) }}
                 {{ form_row(registrationForm.agreeTerms) }}
 
-                <button type="submit" class="btn btn-primary">{{ 'registerTemplate.button' | trans }}</button>
+                <button type="submit" class="btn btn-space">{{ 'registerTemplate.button' | trans }}</button>
             {{ form_end(registrationForm) }}
         </div>
     </div>

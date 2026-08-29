@@ -3,8 +3,8 @@
 {% block title %}{{ 'loginTemplate.title' | trans }}{% endblock %}
 
 {% block body %}
-    <div class="row">
-        <div class="col-md-6 mx-auto">
+    <div class="form-card-wrapper">
+        <div class="form-card">
             <form method="post">
                 {% if error %}
                     <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -22,11 +22,11 @@
                 <a href="{{ path('app_forgot_password_request') }}">{{ 'loginTemplate.forgotPassword' | trans }}</a>
                 <br>
                 <br>
-                <button class="btn btn-lg btn-primary" type="submit">
+                <button class="btn btn-space" type="submit">
                     {{ 'loginTemplate.submit' | trans }}
                 </button>
             </form>
-            <p class="text-center">{{ 'loginTemplate.notRegistered' | trans }} <a href="{{ path('app_register') }}">{{ 'loginTemplate.createAccount' | trans }}</a></p>
+            <p class="form-links">{{ 'loginTemplate.notRegistered' | trans }} <a href="{{ path('app_register') }}">{{ 'loginTemplate.createAccount' | trans }}</a></p>
         </div>
     </div>
 {% endblock %}
