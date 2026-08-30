@@ -1,29 +1,11 @@
-<div class="mt-3" data-like-text="{{ 'like.text' | trans }}">
-    {% if app.user %}
-        <a class="btn btn-outline-primary btn-sm rounded-pill d-inline-flex align-items-center gap-2"
-            href="{{ path('like.video', {id: video.id}) }}"
-            data-action="like"
-            id="like-button-{{ video.id }}">
+{% if app.user %}
+    <a class="btn btn-outline-primary btn-sm rounded-pill d-inline-flex align-items-center gap-2"
+      href="{{ path('like.video', {id: video.id}) }}"
+      data-action="like"
+      data-like-text="{{ 'like.text' | trans }}">
 
-            <i class="fa-regular fa-thumbs-up like-icon-outline {{ app.user in video.likes ? 'd-none' : '' }}"></i>
-            <i class="fa-solid fa-thumbs-up like-icon-solid {{ app.user in video.likes ? '' : 'd-none' }}"></i>
-            <span class="like-count">{{ video.likes|length }} {{ 'like.text' | trans }}</span>
-        </a>
-    {% endif %}
-</div>
-
-<script>
-    document.getElementById('like-button-{{ video.id }}')?.addEventListener('click', function (event) {
-        event.preventDefault();
-        const button = this;
-        const likeText = button.closest('div').dataset.likeText;
-
-        fetch(button.href)
-            .then(response => response.json())
-            .then(data => {
-                button.querySelector('.like-count').textContent = data.nbLike + ' ' + likeText;
-                button.querySelector('.like-icon-outline').classList.toggle('d-none');
-                button.querySelector('.like-icon-solid').classList.toggle('d-none');
-            });
-    });
-</script>
+        <i class="fa-regular fa-thumbs-up like-icon-outline {{ app.user in video.likes ? 'd-none' : '' }}"></i>
+        <i class="fa-solid fa-thumbs-up like-icon-solid {{ app.user in video.likes ? '' : 'd-none' }}"></i>
+        <span class="like-count">{{ video.likes|length }} {{ 'like.text' | trans }}</span>
+    </a>
+{% endif %}
