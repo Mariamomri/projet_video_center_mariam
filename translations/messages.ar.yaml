@@ -62,10 +62,10 @@ loginTemplate.createAccount: إنشاء حساب
 videoCreateTemplate.title: إضافة فيديو
 videoTemplate.back: رجوع
 videoEditTemplate.title: تعديل فيديو
-homeTemplate.title: مرحبًا بك في Vidéo Center
+homeTemplate.title: Vidéo Center مرحبًا بك في
 homeTemplate.resultsFound: "فيديو تم العثور عليه بالكلمة"
 sidebar.about: من نحن
-sidebar.aboutText: "مرحبًا بك في Vidéo Center، مشروع متكامل تم إنشاؤه باستخدام Symfony. يمكنك التسجيل بنظام تأكيد عبر البريد الإلكتروني، وتسجيل الدخول، ونشر فيديوهاتك، وإدارتها، وتعديل ملفك الشخصي. يستخدم الموقع Bootstrap للواجهة الأمامية، وSymfony للواجهة الخلفية، وقاعدة بيانات MySQL."
+sidebar.aboutText: "Vidéo Centerمرحبًا بك في ، مشروع متكامل تم إنشاؤه باستخدام Symfony. يمكنك التسجيل بنظام تأكيد عبر البريد الإلكتروني، وتسجيل الدخول، ونشر فيديوهاتك، وإدارتها، وتعديل ملفك الشخصي. يستخدم الموقع Bootstrap للواجهة الأمامية، وSymfony للواجهة الخلفية، وقاعدة بيانات MySQL."
 sidebar.howItWorks: كيف يعمل؟
 sidebar.step1: "شاهد الفيديوهات غير المميزة مجانًا، حتى بدون حساب."
 sidebar.step2: "أنشئ حسابًا مجانيًا لفتح الفيديوهات المميزة."
@@ -80,3 +80,4 @@ commentSection.comments: "التعليقات"
 commentForm.postComment: "نشر تعليق"
 commentSection.confirmDelete: "هل أنت متأكد أنك تريد حذف هذا التعليق؟"
 commentSection.delete: "حذف"
+homeTemplate.searchPlaceholder: "ابحث بكلمة مفتاحية..."
