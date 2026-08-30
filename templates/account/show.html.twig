@@ -4,7 +4,7 @@
 
 {% block body %}
     <div class="profile-card">
-        <img class="profile-avatar" src="{{ asset(vich_uploader_asset(app.user, 'imageFile')) }}">
+        <img class="profile-avatar" src="{{ app.request.basePath }}{{ vich_uploader_asset(app.user, 'imageFile') }}">
         <p class="text-muted-custom">{{ app.user.email }}</p>
         <h2>{{ app.user.firstname ~ " " ~ app.user.lastname }}</h2>
         <p class="text-muted-custom">{{ 'accountShow.Accountcreatedon'|trans }} {{ app.user.createdAt|date("d/m/Y") }}</p>
@@ -19,7 +19,7 @@
                     <h5>{{ video.title|slice(0, 20) }}</h5>
                     <iframe width="300" height="200" src="{{ video.videoLink }}"></iframe>
                 </a>
-                <p>{{ video.descritpion|slice(0, 25) }}</p>
+                <p>{{ video.description|slice(0, 25) }}</p>
             </div>
         {% endfor %}
     </div>
