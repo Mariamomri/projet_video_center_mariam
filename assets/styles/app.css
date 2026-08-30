@@ -715,3 +715,65 @@ button.btn-space::after {
 .comment-delete-btn {
     color: var(--pink) !important;
 }
+
+
+/* mobile fixes: prevent horizontal overflow */
+html,
+body {
+    overflow-x: hidden;
+}
+
+.video-card iframe {
+    max-width: 100%;
+}
+
+@media (max-width: 576px) {
+    #slideshow {
+        height: 260px;
+    }
+
+    .entire-content {
+        width: 220px;
+        padding-top: 40px;
+    }
+
+    .content-carrousel figure {
+        height: 120px;
+    }
+
+    .content-carrousel figure:nth-child(1) {
+        transform: rotateY(0deg) translateZ(300px);
+    }
+
+    .content-carrousel figure:nth-child(2) {
+        transform: rotateY(40deg) translateZ(300px);
+    }
+
+    .content-carrousel figure:nth-child(3) {
+        transform: rotateY(80deg) translateZ(300px);
+    }
+
+    .content-carrousel figure:nth-child(4) {
+        transform: rotateY(120deg) translateZ(300px);
+    }
+
+    .content-carrousel figure:nth-child(5) {
+        transform: rotateY(160deg) translateZ(300px);
+    }
+
+    .content-carrousel figure:nth-child(6) {
+        transform: rotateY(200deg) translateZ(300px);
+    }
+
+    .content-carrousel figure:nth-child(7) {
+        transform: rotateY(240deg) translateZ(300px);
+    }
+
+    .content-carrousel figure:nth-child(8) {
+        transform: rotateY(280deg) translateZ(300px);
+    }
+
+    .content-carrousel figure:nth-child(9) {
+        transform: rotateY(320deg) translateZ(300px);
+    }
+}
