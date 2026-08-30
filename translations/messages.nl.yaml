@@ -1,0 +1,82 @@
+vich_uploader.form_label.delete_confirm: 'Verwijderen?'
+vich_uploader.link.download: Downloaden
+'You must login to see your account !': '__You must login to see your account !'
+'You must login to edit your account !': '__You must login to edit your account !'
+'Account successfuly updated !': '__Account successfuly updated !'
+'You are already logged in !': '__You are already logged in !'
+'Your account was successfully created ! Check your emails to confirm your registration.': '__Your account was successfully created ! Check your emails to confirm your registration.'
+'Your email address has been verified !': '__Your email address has been verified !'
+videoController.index.emailNotVerified: __videoController.index.emailNotVerified
+'You must login to view a Premium Video !': '__You must login to view a Premium Video !'
+'You must confirm your email to view a Premium Video !': '__You must confirm your email to view a Premium Video !'
+'You must login to comment !': '__You must login to comment !'
+'You must confirm your email to comment !': '__You must confirm your email to comment !'
+'Your comment was successfully posted.': '__Your comment was successfully posted.'
+'You must confirm your email to edit Video !': '__You must confirm your email to edit Video !'
+'You must be the user ': '__You must be the user '
+' to edit this video': '__ to edit this video'
+'You must login to edit Video !': '__You must login to edit Video !'
+'The video was successfully modified !': '__The video was successfully modified !'
+'You must confirm your email to create Video !': '__You must confirm your email to create Video !'
+'You must login to create Video !': '__You must login to create Video !'
+'The video ': '__The video '
+' was successfully created': '__ was successfully created'
+'You must confirm your email to delete Video !': '__You must confirm your email to delete Video !'
+' to delete this video': '__ to delete this video'
+'You must login to delete Video !': '__You must login to delete Video !'
+' was successfully deleted !': '__ was successfully deleted !'
+'Welcome ': '__Welcome '
+'Update Profile': '__Update Profile'
+'Apply changes': '__Apply changes'
+accountShow.Accountcreatedon: __accountShow.Accountcreatedon
+accountShow.EditAccount: __accountShow.EditAccount
+accountShow.myVideos: __accountShow.myVideos
+like.text: __like.text
+navBar.home: __navBar.home
+navBar.createVideo: __navBar.createVideo
+navBar.account: __navBar.account
+navBar.logout: __navBar.logout
+navBar.register: __navBar.register
+navBar.login: __navBar.login
+registerTemplate.title: __registerTemplate.title
+registerTemplate.button: __registerTemplate.button
+resetPassword.emailSentTitle: __resetPassword.emailSentTitle
+resetPassword.emailSentText: __resetPassword.emailSentText
+resetPassword.checkSpam: __resetPassword.checkSpam
+resetPassword.tryAgain: __resetPassword.tryAgain
+resetPasswordEmail.greeting: __resetPasswordEmail.greeting
+resetPasswordEmail.instructions: __resetPasswordEmail.instructions
+resetPasswordEmail.expires: __resetPasswordEmail.expires
+resetPasswordEmail.cheers: __resetPasswordEmail.cheers
+resetPassword.title: __resetPassword.title
+resetPassword.instructions: __resetPassword.instructions
+resetPassword.send: __resetPassword.send
+resetPassword.submit: __resetPassword.submit
+loginTemplate.title: __loginTemplate.title
+loginTemplate.email: __loginTemplate.email
+loginTemplate.password: __loginTemplate.password
+loginTemplate.forgotPassword: __loginTemplate.forgotPassword
+loginTemplate.submit: __loginTemplate.submit
+loginTemplate.notRegistered: __loginTemplate.notRegistered
+loginTemplate.createAccount: __loginTemplate.createAccount
+videoCreateTemplate.title: __videoCreateTemplate.title
+videoTemplate.back: __videoTemplate.back
+videoEditTemplate.title: __videoEditTemplate.title
+homeTemplate.title: __homeTemplate.title
+homeTemplate.resultsFound: __homeTemplate.resultsFound
+sidebar.about: __sidebar.about
+sidebar.aboutText: __sidebar.aboutText
+sidebar.howItWorks: __sidebar.howItWorks
+sidebar.step1: __sidebar.step1
+sidebar.step2: __sidebar.step2
+sidebar.step3: __sidebar.step3
+sidebar.step4: __sidebar.step4
+videoTemplate.by: __videoTemplate.by
+videoTemplate.publishedOn: __videoTemplate.publishedOn
+videoTemplate.edit: __videoTemplate.edit
+videoTemplate.confirmDelete: __videoTemplate.confirmDelete
+videoTemplate.delete: __videoTemplate.delete
+commentSection.comments: __commentSection.comments
+commentForm.postComment: __commentForm.postComment
+commentSection.confirmDelete: __commentSection.confirmDelete
+commentSection.delete: __commentSection.delete
