@@ -1,0 +1,93 @@
+navBar.home: Accueil
+navBar.createVideo: Créer vidéo
+navBar.logout: Se déconnecter
+navBar.register: "S'inscrire"
+navBar.login: Se connecter
+registerTemplate.title: Créer un compte
+registerTemplate.button: "S'inscrire"
+resetPassword.emailSentTitle: Email de réinitialisation envoyé
+resetPassword.emailSentText: "Si un compte correspondant à votre email existe, un email vient de vous être envoyé avec un lien pour réinitialiser votre mot de passe. Ce lien expirera dans"
+resetPassword.checkSpam: "Si vous ne recevez pas d'email, vérifiez vos spams ou"
+resetPassword.tryAgain: réessayez
+resetPasswordEmail.greeting: Bonjour !
+resetPasswordEmail.instructions: "Pour réinitialiser votre mot de passe, veuillez visiter le lien suivant"
+resetPasswordEmail.expires: Ce lien expirera dans
+resetPasswordEmail.cheers: Cordialement !
+resetPassword.title: Réinitialiser votre mot de passe
+resetPassword.instructions: "Saisissez votre adresse email, nous vous enverrons un lien pour réinitialiser votre mot de passe."
+resetPassword.send: Envoyer le lien de réinitialisation
+resetPassword.submit: Réinitialiser le mot de passe
+loginTemplate.title: Se connecter
+loginTemplate.email: Email
+loginTemplate.password: Mot de passe
+loginTemplate.forgotPassword: Mot de passe oublié ?
+loginTemplate.submit: Se connecter
+loginTemplate.notRegistered: Pas encore enregistré ?
+loginTemplate.createAccount: Créer un compte
+videoCreateTemplate.title: Ajout d'une vidéo
+videoTemplate.back: Retour
+videoEditTemplate.title: Édition d'une vidéo
+homeTemplate.title: Bienvenue dans Vidéo Center
+homeTemplate.resultsFound: "vidéo(s) trouvé(s) avec le terme"
+videoTemplate.by: Par
+videoTemplate.publishedOn: Publié le
+videoTemplate.edit: Éditer
+videoTemplate.delete: Supprimer
+registerForm.firstname: Prénom
+registerForm.lastname: Nom
+registerForm.email: Email
+registerForm.plainPassword: Mot de passe
+registerForm.agreeTerms: Accepter les termes
+videoForm.title: Titre
+videoForm.videoLink: Lien Vidéo
+videoForm.descritpion: Description
+videoForm.premiumVideo: Vidéo Réservée aux Membres
+videoForm.save: Enregistrer
+"You must login to create Video !": "Vous devez vous connecter pour créer une vidéo !"
+"You must login to view a Premium Video !": "Vous devez vous connecter pour voir une Vidéo Prémium !"
+"You must confirm your email to view a Premium Video !": "Vous devez confirmer votre email pour voir une Vidéo Prémium !"
+"You are already logged in !": "Vous êtes déjà connecté !"
+"Your account was successfully created ! Check your emails to confirm your registration.": "Votre compte a été créé avec succès ! Vérifiez vos emails pour confirmer votre inscription."
+"Your email address has been verified !": "Votre adresse email a bien été vérifiée !"
+accountShow.profile: Mon Profil
+accountShow.Accountcreatedon: "Compte créé le"
+accountShow.EditAccount: "Modifier votre profil"
+accountShow.myVideos: "Mes vidéos"
+userForm.firstname: Prénom
+userForm.lastname: Nom
+"Update Profile": "Modifier le profil"
+"Apply changes": "Appliquer les changements"
+"Account successfuly updated !": "Compte mis à jour avec succès !"
+"You must login to see your account !": "Vous devez vous connecter pour voir votre compte !"
+"You must login to edit your account !": "Vous devez vous connecter pour modifier votre compte !"
+navBar.account: "Mon Profil"
+videoController.index.emailNotVerified: "Vous devez confirmer votre email pour créer/modifier des vidéos."
+"You must confirm your email to edit Video !": "Vous devez confirmer votre email pour modifier une vidéo !"
+"You must be the user ": "Vous devez être l'utilisateur "
+" to edit this video": " pour modifier cette vidéo"
+"The video was successfully modified !": "La vidéo a bien été modifiée !"
+"You must confirm your email to create Video !": "Vous devez confirmer votre email pour créer une vidéo !"
+"The video ": "La vidéo "
+" was successfully created": " a bien été créée"
+"You must confirm your email to delete Video !": "Vous devez confirmer votre email pour supprimer une vidéo !"
+" to delete this video": " pour supprimer cette vidéo"
+" was successfully deleted !": " a bien été supprimée !"
+"Welcome ": "Bienvenue "
+sidebar.about: "À propos"
+sidebar.aboutText: "Bienvenue sur Vidéo Center, un projet full-stack réalisé en Symfony. Vous pouvez vous inscrire avec un système de confirmation par email, vous connecter, poster vos vidéos, les gérer et modifier votre profil. Le site utilise Bootstrap pour le front-end, Symfony pour le back-end, et une base de données MySQL."
+sidebar.howItWorks: "Comment ça marche ?"
+sidebar.step1: "Regardez gratuitement les vidéos non premium, même sans compte."
+sidebar.step2: "Créez un compte gratuit pour débloquer les vidéos premium."
+sidebar.step3: "Une fois connecté, postez vos propres vidéos en un clic, faire des commentaires et faire des likes sur les vidéos."
+sidebar.step4: "Utilisez la barre de recherche pour trouver une vidéo précise."
+commentSection.comments: "Commentaires"
+commentSection.confirmDelete: "Êtes-vous sûr de vouloir supprimer ce commentaire ?"
+commentSection.delete: "Supprimer"
+commentForm.postComment: "Poster un commentaire"
+"Vous ne pouvez supprimer que vos propres commentaires !": "Vous ne pouvez supprimer que vos propres commentaires !"
+"Votre commentaire a bien été supprimé.": "Votre commentaire a bien été supprimé."
+"You must login to comment !": "Vous devez vous connecter pour commenter !"
+"You must confirm your email to comment !": "Vous devez confirmer votre email pour commenter !"
+"Your comment was successfully posted.": "Votre commentaire a bien été publié."
+like.text: "J'aime"
+homeTemplate.searchPlaceholder: "Recherche via un mot clé..."

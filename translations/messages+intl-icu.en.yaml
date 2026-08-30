@@ -1,0 +1,93 @@
+navBar.home: Home
+navBar.createVideo: "Create video"
+navBar.logout: Logout
+navBar.register: Register
+navBar.login: Login
+registerTemplate.title: "Create an account"
+registerTemplate.button: Register
+resetPassword.emailSentTitle: "Password reset email sent"
+resetPassword.emailSentText: "If an account matching your email exists, an email was just sent with a link to reset your password. This link will expire in"
+resetPassword.checkSpam: "If you don't receive an email, check your spam folder or"
+resetPassword.tryAgain: "try again"
+resetPasswordEmail.greeting: Hi!
+resetPasswordEmail.instructions: "To reset your password, please visit the following link"
+resetPasswordEmail.expires: "This link will expire in"
+resetPasswordEmail.cheers: Cheers!
+resetPassword.title: "Reset your password"
+resetPassword.instructions: "Enter your email address, and we will send you a link to reset your password."
+resetPassword.send: "Send password reset email"
+resetPassword.submit: "Reset password"
+loginTemplate.title: Login
+loginTemplate.email: Email
+loginTemplate.password: Password
+loginTemplate.forgotPassword: "Forgot password?"
+loginTemplate.submit: Login
+loginTemplate.notRegistered: "Not registered yet?"
+loginTemplate.createAccount: "Create an account"
+videoCreateTemplate.title: "Add a video"
+videoTemplate.back: Back
+videoEditTemplate.title: "Edit a video"
+homeTemplate.title: "Welcome to Vidéo Center"
+homeTemplate.resultsFound: "video(s) found with the term"
+videoTemplate.by: By
+videoTemplate.publishedOn: "Published on"
+videoTemplate.edit: Edit
+videoTemplate.delete: Delete
+registerForm.firstname: Firstname
+registerForm.lastname: Lastname
+registerForm.email: Email
+registerForm.plainPassword: Password
+registerForm.agreeTerms: Accept the terms
+videoForm.title: Title
+videoForm.videoLink: Video Link
+videoForm.descritpion: Description
+videoForm.premiumVideo: Members-Only Video
+videoForm.save: Save
+"You must login to create Video !": "You must login to create Video !"
+"You must login to view a Premium Video !": "You must login to view a Premium Video !"
+"You must confirm your email to view a Premium Video !": "You must confirm your email to view a Premium Video !"
+"You are already logged in !": "You are already logged in !"
+"Your account was successfully created ! Check your emails to confirm your registration.": "Your account was successfully created ! Check your emails to confirm your registration."
+"Your email address has been verified !": "Your email address has been verified !"
+accountShow.profile: My Profile
+accountShow.Accountcreatedon: "Account created on"
+accountShow.EditAccount: "Edit your profile"
+accountShow.myVideos: "My videos"
+userForm.firstname: First name
+userForm.lastname: Last name
+"Update Profile": "Update Profile"
+"Apply changes": "Apply changes"
+"Account successfuly updated !": "Account successfully updated !"
+"You must login to see your account !": "You must login to see your account !"
+"You must login to edit your account !": "You must login to edit your account !"
+navBar.account: "My Profile"
+videoController.index.emailNotVerified: "You must confirm your email to create/edit videos."
+"You must confirm your email to edit Video !": "You must confirm your email to edit Video !"
+"You must be the user ": "You must be the user "
+" to edit this video": " to edit this video"
+"The video was successfully modified !": "The video was successfully modified !"
+"You must confirm your email to create Video !": "You must confirm your email to create Video !"
+"The video ": "The video "
+" was successfully created": " was successfully created"
+"You must confirm your email to delete Video !": "You must confirm your email to delete Video !"
+" to delete this video": " to delete this video"
+" was successfully deleted !": " was successfully deleted !"
+"Welcome ": "Bienvenue "
+sidebar.about: "About"
+sidebar.aboutText: "Welcome to Vidéo Center, a full-stack project built with Symfony. You can register with an email confirmation system, log in, post your videos, manage them, and edit your profile. The site uses Bootstrap for the front-end, Symfony for the back-end, and a MySQL database."
+sidebar.howItWorks: "How does it work?"
+sidebar.step1: "Watch non-premium videos for free, even without an account."
+sidebar.step2: "Create a free account to unlock premium videos."
+sidebar.step3: "Once logged in, post your own videos in one click. You can also comment and like videos."
+sidebar.step4: "Use the search bar to find a specific video."
+commentSection.comments: "Comments"
+commentSection.confirmDelete: "Are you sure you want to delete this comment?"
+commentSection.delete: "Delete"
+commentForm.postComment: "Post a comment"
+"Vous ne pouvez supprimer que vos propres commentaires !": "You can only delete your own comments !"
+"Votre commentaire a bien été supprimé.": "Your comment was successfully deleted."
+"You must login to comment !": "You must login to comment !"
+"You must confirm your email to comment !": "You must confirm your email to comment !"
+"Your comment was successfully posted.": "Your comment was successfully posted."
+like.text: "Like"
+homeTemplate.searchPlaceholder: "Search by keyword..."

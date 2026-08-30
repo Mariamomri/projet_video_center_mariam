@@ -1,0 +1,119 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid nav-grid">
+        <a class="navbar-brand" href="{{ path('app_home') }}">
+            <img src="{{ asset('images/logovideo.png') }}" alt="Vidéo Center" class="navbar-logo">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse nav-links-wrap" id="navbarsExample03">
+            <ul class="navbar-nav mx-auto mb-2 mb-sm-0">
+                <li class="nav-item">
+                    <a class="nav-link {{ app.current_route == 'app_home' ? 'active' : '' }}" href="{{ path('app_home') }}">{{ 'navBar.home' | trans }}</a>
+                </li>
+                {% if app.user %}
+                    {% if app.user.isVerified %}
+                        <li class="nav-item">
+                            <a class="nav-link {{ app.current_route == 'app_video_create' ? 'active' : '' }}" href="{{ path('app_video_create') }}">{{ 'navBar.createVideo' | trans }}</a>
+                        </li>
+                    {% endif %}
+                    <li class="nav-item">
+                        <a class="nav-link {{ app.current_route == 'app_account' ? 'active' : '' }}" href="{{ path('app_account') }}">{{ 'navBar.account' | trans }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_logout') }}">{{ 'navBar.logout' | trans }}</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link {{ app.current_route == 'app_register' ? 'active' : '' }}" href="{{ path('app_register') }}">{{ 'navBar.register' | trans }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ app.current_route == 'app_login' ? 'active' : '' }}" href="{{ path('app_login') }}">{{ 'navBar.login' | trans }}</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+
+        <div class="d-flex align-items-center gap-2 nav-dropdowns">
+                        <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    {% if app.request.locale == 'en' %}
+                        <span class="flag">🇬🇧</span> English
+                    {% elseif app.request.locale == 'it' %}
+                        <span class="flag">🇮🇹</span> Italiano
+                    {% elseif app.request.locale == 'nl' %}
+                        <span class="flag">🇳🇱</span> Nederlands
+                    {% elseif app.request.locale == 'ar' %}
+                        <span class="flag">🇸🇦</span> العربية
+                    {% else %}
+                        <span class="flag">🇫🇷</span> Français
+                    {% endif %}
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                        <a class="dropdown-item" href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({'_locale': 'fr'})) }}">
+                            <span class="flag">🇫🇷</span> Français
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({'_locale': 'en'})) }}">
+                            <span class="flag">🇬🇧</span> English
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({'_locale': 'it'})) }}">
+                            <span class="flag">🇮🇹</span> Italiano
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({'_locale': 'nl'})) }}">
+                            <span class="flag">🇳🇱</span> Nederlands
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({'_locale': 'ar'})) }}">
+                            <span class="flag">🇸🇦</span> العربية
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle d-flex align-items-center"
+                        id="bd-theme"
+                        type="button"
+                        aria-expanded="false"
+                        data-bs-toggle="dropdown"
+                        aria-label="Toggle theme">
+                    <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                    <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+                    <li>
+                        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
+                            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+                            Light
+                            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
+                            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+                            Dark
+                            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto">
+                            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                            Auto
+                            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

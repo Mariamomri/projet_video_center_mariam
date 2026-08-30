@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'homeTemplate.title' | trans }}{% endblock %}
+
+{% block body %}
+
+    {# title #}
+    <h1 class="titolo" id="page-title">{{ 'homeTemplate.title' | trans }}</h1>
+
+    <!-- 3D Slideshow Section --> 
+    {% set visibleVideos = videos|filter(v => not v.premiumVideo or (app.user and app.user.isVerified)) %}
+    {% if visibleVideos|length > 0 %}
+    <section id="slideshow">
+        <div class="entire-content">
+            <div class="content-carrousel">
+                {% for video in visibleVideos|slice(0, 9) %}
+                    <figure class="shadow">
+                        <a href="{{ path('app_video_show', {id: video.id}) }}">
+                            <img src="https://img.youtube.com/vi/{{ video.videoLink|split('/')|last }}/hqdefault.jpg" alt="{{ video.title }}">
+                        </a>
+                    </figure>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+
+    {# searchbar #}
+    {% if app.user %}
+        {% include "/layouts/partials/_search_data.html.twig" with {
+            form: form
+        } only %}
+
+        {% if app.request.query.get('q') is not empty %}
+            <p class="text-center">{{ videos.getTotalItemCount }} {{ 'homeTemplate.resultsFound' | trans }} "{{ app.request.query.get('q') }}"</p>
+        {% endif %}
+    {% endif %}
+
+    {# sidebar #}
+    <div class="content-with-sidebar">
+        <aside class="site-sidebar" id="site-sidebar">
+            <h2>{{ 'sidebar.about' | trans }}</h2>
+            <p class="sidebar-intro">{{ 'sidebar.aboutText' | trans }}</p>
+            <h2>{{ 'sidebar.howItWorks' | trans }}</h2>
+            <div class="sidebar-item">
+                <span class="icon">1. </span>
+                <p>{{ 'sidebar.step1' | trans }}</p>
+            </div>
+            <div class="sidebar-item">
+                <span class="icon">2 .</span>
+                <p>{{ 'sidebar.step2' | trans }}</p>
+            </div>
+            <div class="sidebar-item">
+                <span class="icon">3 .</span>
+                <p>{{ 'sidebar.step3' | trans }}</p>
+            </div>
+            <div class="sidebar-item">
+                <span class="icon">4 .</span>
+                <p>{{ 'sidebar.step4' | trans }}</p>
+            </div>
+            <img src="{{ asset('images/videoside.gif') }}" alt="Vidéo Center" class="sidebar-gif">
+        </aside>
+        
+    {# grid #}
+    <div class="video-grid">
+    {% for video in videos %}
+        {% if not video.premiumVideo or (app.user and app.user.isVerified) %}
+            <div class="video-card">
+                <a href="{{ path('app_video_show', {id: video.id}) }}">
+                    <h3>
+                        {% if video.premiumVideo %}
+                            <i class="fa-solid fa-star text-warning"></i>
+                        {% endif %}
+                        {{ video.title|slice(0, 20) }}
+                    </h3>
+                    <iframe width="300" height="200" src="{{ video.videoLink }}"></iframe>
+                </a>
+                <p>{{ video.descritpion|slice(0, 25) }}</p>
+                <p>{{ 'videoTemplate.by' | trans }} {{ video.user.firstname }} {{ video.user.lastname }}</p>
+                <p>{{ video.createdAt|ago }}</p>
+                {% include "components/_like.html.twig" with { video: video } only %}
+            </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+    </div>
+    <br><br>
+    <div class="navigation d-flex justify-content-center mb-4">
+    {{ knp_pagination_render(videos) }}
+    </div>
+{% endblock %}

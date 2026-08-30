@@ -1,0 +1,83 @@
+vich_uploader.form_label.delete_confirm: "Verwijderen?"
+vich_uploader.link.download: Downloaden
+"You must login to see your account !": "Je moet inloggen om je account te zien !"
+"You must login to edit your account !": "Je moet inloggen om je account te bewerken !"
+"Account successfuly updated !": "Account succesvol bijgewerkt !"
+"You are already logged in !": "Je bent al ingelogd !"
+"Your account was successfully created ! Check your emails to confirm your registration.": "Je account is succesvol aangemaakt ! Controleer je e-mail om je registratie te bevestigen."
+"Your email address has been verified !": "Je e-mailadres is geverifieerd !"
+videoController.index.emailNotVerified: "Je moet je e-mail bevestigen om video's te maken/bewerken."
+"You must login to view a Premium Video !": "Je moet inloggen om een Premium Video te bekijken !"
+"You must confirm your email to view a Premium Video !": "Je moet je e-mail bevestigen om een Premium Video te bekijken !"
+"You must login to comment !": "Je moet inloggen om te reageren !"
+"You must confirm your email to comment !": "Je moet je e-mail bevestigen om te reageren !"
+"Your comment was successfully posted.": "Je reactie is succesvol geplaatst."
+"You must confirm your email to edit Video !": "Je moet je e-mail bevestigen om een Video te bewerken !"
+"You must be the user ": "Je moet de gebruiker "
+" to edit this video": " zijn om deze video te bewerken"
+"You must login to edit Video !": "Je moet inloggen om een Video te bewerken !"
+"The video was successfully modified !": "De video is succesvol gewijzigd !"
+"You must confirm your email to create Video !": "Je moet je e-mail bevestigen om een Video te maken !"
+"You must login to create Video !": "Je moet inloggen om een Video te maken !"
+"The video ": "De video "
+" was successfully created": " is succesvol aangemaakt"
+"You must confirm your email to delete Video !": "Je moet je e-mail bevestigen om een Video te verwijderen !"
+" to delete this video": " om deze video te verwijderen"
+"You must login to delete Video !": "Je moet inloggen om een Video te verwijderen !"
+" was successfully deleted !": " is succesvol verwijderd !"
+"Welcome ": "Welkom "
+"Update Profile": "Profiel bijwerken"
+"Apply changes": "Wijzigingen toepassen"
+accountShow.Accountcreatedon: "Account aangemaakt op"
+accountShow.EditAccount: "Bewerk je profiel"
+accountShow.myVideos: "Mijn video's"
+like.text: "Vind ik leuk"
+navBar.home: Home
+navBar.createVideo: Video maken
+navBar.account: "Mijn profiel"
+navBar.logout: Uitloggen
+navBar.register: Registreren
+navBar.login: Inloggen
+registerTemplate.title: Account aanmaken
+registerTemplate.button: Registreren
+resetPassword.emailSentTitle: Wachtwoordherstel-e-mail verzonden
+resetPassword.emailSentText: "Als er een account bestaat dat overeenkomt met je e-mail, hebben we je zojuist een e-mail gestuurd met een link om je wachtwoord opnieuw in te stellen. Deze link verloopt over"
+resetPassword.checkSpam: "Als je geen e-mail ontvangt, controleer dan je spammap of"
+resetPassword.tryAgain: probeer opnieuw
+resetPasswordEmail.greeting: Hallo!
+resetPasswordEmail.instructions: "Om je wachtwoord opnieuw in te stellen, bezoek de volgende link"
+resetPasswordEmail.expires: Deze link verloopt over
+resetPasswordEmail.cheers: Met vriendelijke groet!
+resetPassword.title: Stel je wachtwoord opnieuw in
+resetPassword.instructions: "Voer je e-mailadres in, we sturen je een link om je wachtwoord opnieuw in te stellen."
+resetPassword.send: Verstuur wachtwoordherstel-e-mail
+resetPassword.submit: Wachtwoord opnieuw instellen
+loginTemplate.title: Inloggen
+loginTemplate.email: E-mail
+loginTemplate.password: Wachtwoord
+loginTemplate.forgotPassword: Wachtwoord vergeten?
+loginTemplate.submit: Inloggen
+loginTemplate.notRegistered: Nog niet geregistreerd?
+loginTemplate.createAccount: Account aanmaken
+videoCreateTemplate.title: Video toevoegen
+videoTemplate.back: Terug
+videoEditTemplate.title: Video bewerken
+homeTemplate.title: Welkom bij Vidéo Center
+homeTemplate.resultsFound: "video's gevonden met de term"
+sidebar.about: Over ons
+sidebar.aboutText: "Welkom bij Vidéo Center, een full-stack project gemaakt in Symfony. Je kunt je registreren met een e-mailbevestigingssysteem, inloggen, je video's plaatsen, beheren en je profiel bewerken. De site gebruikt Bootstrap voor de front-end, Symfony voor de back-end en een MySQL-database."
+sidebar.howItWorks: Hoe werkt het?
+sidebar.step1: "Bekijk gratis niet-premium video's, zelfs zonder account."
+sidebar.step2: "Maak een gratis account aan om premium video's te ontgrendelen."
+sidebar.step3: "Eenmaal ingelogd, plaats je je eigen video's met één klik."
+sidebar.step4: "Gebruik de zoekbalk om een specifieke video te vinden."
+videoTemplate.by: Door
+videoTemplate.publishedOn: Gepubliceerd op
+videoTemplate.edit: Bewerken
+videoTemplate.confirmDelete: "Weet je zeker dat je deze video wilt verwijderen?"
+videoTemplate.delete: Verwijderen
+commentSection.comments: "Reacties"
+commentForm.postComment: "Plaats een reactie"
+commentSection.confirmDelete: "Weet je zeker dat je deze reactie wilt verwijderen?"
+commentSection.delete: "Verwijderen"
+homeTemplate.searchPlaceholder: "Zoek op trefwoord..."

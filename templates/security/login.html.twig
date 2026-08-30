@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'loginTemplate.title' | trans }}{% endblock %}
+
+{% block body %}
+    <div class="form-card-wrapper">
+        <div class="form-card">
+            <form method="post">
+                {% if error %}
+                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
+
+                <h1>{{ 'loginTemplate.title' | trans }}</h1>
+                <br>
+                <label for="username">{{ 'loginTemplate.email' | trans }}</label>
+                <input type="email" value="{{ last_username }}" name="_username" id="username" class="form-control" autocomplete="email" required autofocus>
+                <label for="password">{{ 'loginTemplate.password' | trans }}</label>
+                <input type="password" name="_password" id="password" class="form-control" autocomplete="current-password" required>
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+                <br>
+                <a href="{{ path('app_forgot_password_request') }}">{{ 'loginTemplate.forgotPassword' | trans }}</a>
+                <br>
+                <br>
+                <button class="btn btn-space" type="submit">
+                    {{ 'loginTemplate.submit' | trans }}
+                </button>
+            </form>
+            <p class="form-links">{{ 'loginTemplate.notRegistered' | trans }} <a href="{{ path('app_register') }}">{{ 'loginTemplate.createAccount' | trans }}</a></p>
+        </div>
+    </div>
+{% endblock %}

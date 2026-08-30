@@ -1,0 +1,11 @@
+{% if app.user %}
+    <a class="btn btn-outline-primary btn-sm rounded-pill d-inline-flex align-items-center gap-2"
+      href="{{ path('like.video', {id: video.id}) }}"
+      data-action="like"
+      data-like-text="{{ 'like.text' | trans }}">
+
+        <i class="fa-regular fa-thumbs-up like-icon-outline {{ app.user in video.likes ? 'd-none' : '' }}"></i>
+        <i class="fa-solid fa-thumbs-up like-icon-solid {{ app.user in video.likes ? '' : 'd-none' }}"></i>
+        <span class="like-count">{{ video.likes|length }} {{ 'like.text' | trans }}</span>
+    </a>
+{% endif %}

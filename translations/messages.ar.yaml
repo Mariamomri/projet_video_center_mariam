@@ -1,0 +1,83 @@
+vich_uploader.form_label.delete_confirm: "حذف ؟"
+vich_uploader.link.download: تحميل
+"You must login to see your account !": "يجب عليك تسجيل الدخول لرؤية حسابك !"
+"You must login to edit your account !": "يجب عليك تسجيل الدخول لتعديل حسابك !"
+"Account successfuly updated !": "تم تحديث الحساب بنجاح !"
+"You are already logged in !": "أنت متصل بالفعل !"
+"Your account was successfully created ! Check your emails to confirm your registration.": "تم إنشاء حسابك بنجاح ! تحقق من بريدك الإلكتروني لتأكيد تسجيلك."
+"Your email address has been verified !": "تم التحقق من عنوان بريدك الإلكتروني !"
+videoController.index.emailNotVerified: "يجب عليك تأكيد بريدك الإلكتروني لإنشاء/تعديل الفيديوهات."
+"You must login to view a Premium Video !": "يجب عليك تسجيل الدخول لمشاهدة فيديو مميز !"
+"You must confirm your email to view a Premium Video !": "يجب عليك تأكيد بريدك الإلكتروني لمشاهدة فيديو مميز !"
+"You must login to comment !": "يجب عليك تسجيل الدخول للتعليق !"
+"You must confirm your email to comment !": "يجب عليك تأكيد بريدك الإلكتروني للتعليق !"
+"Your comment was successfully posted.": "تم نشر تعليقك بنجاح."
+"You must confirm your email to edit Video !": "يجب عليك تأكيد بريدك الإلكتروني لتعديل فيديو !"
+"You must be the user ": "يجب أن تكون المستخدم "
+" to edit this video": " لتعديل هذا الفيديو"
+"You must login to edit Video !": "يجب عليك تسجيل الدخول لتعديل فيديو !"
+"The video was successfully modified !": "تم تعديل الفيديو بنجاح !"
+"You must confirm your email to create Video !": "يجب عليك تأكيد بريدك الإلكتروني لإنشاء فيديو !"
+"You must login to create Video !": "يجب عليك تسجيل الدخول لإنشاء فيديو !"
+"The video ": "الفيديو "
+" was successfully created": " تم إنشاؤه بنجاح"
+"You must confirm your email to delete Video !": "يجب عليك تأكيد بريدك الإلكتروني لحذف فيديو !"
+" to delete this video": " لحذف هذا الفيديو"
+"You must login to delete Video !": "يجب عليك تسجيل الدخول لحذف فيديو !"
+" was successfully deleted !": " تم حذفه بنجاح !"
+"Welcome ": "مرحبًا "
+"Update Profile": "تحديث الملف الشخصي"
+"Apply changes": "تطبيق التغييرات"
+accountShow.Accountcreatedon: "تم إنشاء الحساب في"
+accountShow.EditAccount: "تعديل ملفك الشخصي"
+accountShow.myVideos: "فيديوهاتي"
+like.text: "إعجاب"
+navBar.home: الرئيسية
+navBar.createVideo: إنشاء فيديو
+navBar.account: "ملفي الشخصي"
+navBar.logout: تسجيل الخروج
+navBar.register: التسجيل
+navBar.login: تسجيل الدخول
+registerTemplate.title: إنشاء حساب
+registerTemplate.button: تسجيل
+resetPassword.emailSentTitle: تم إرسال بريد إعادة تعيين كلمة المرور
+resetPassword.emailSentText: "إذا كان هناك حساب مطابق لبريدك الإلكتروني، فقد أرسلنا لك للتو بريدًا إلكترونيًا يحتوي على رابط لإعادة تعيين كلمة المرور. سينتهي صلاحية هذا الرابط خلال"
+resetPassword.checkSpam: "إذا لم تستلم بريدًا إلكترونيًا، تحقق من مجلد الرسائل غير المرغوب فيها أو"
+resetPassword.tryAgain: أعد المحاولة
+resetPasswordEmail.greeting: مرحبًا!
+resetPasswordEmail.instructions: "لإعادة تعيين كلمة المرور، يرجى زيارة الرابط التالي"
+resetPasswordEmail.expires: سينتهي صلاحية هذا الرابط خلال
+resetPasswordEmail.cheers: مع أطيب التحيات!
+resetPassword.title: إعادة تعيين كلمة المرور
+resetPassword.instructions: "أدخل عنوان بريدك الإلكتروني، وسنرسل لك رابطًا لإعادة تعيين كلمة المرور."
+resetPassword.send: إرسال بريد إعادة تعيين كلمة المرور
+resetPassword.submit: إعادة تعيين كلمة المرور
+loginTemplate.title: تسجيل الدخول
+loginTemplate.email: البريد الإلكتروني
+loginTemplate.password: كلمة المرور
+loginTemplate.forgotPassword: نسيت كلمة المرور؟
+loginTemplate.submit: تسجيل الدخول
+loginTemplate.notRegistered: لست مسجلاً بعد؟
+loginTemplate.createAccount: إنشاء حساب
+videoCreateTemplate.title: إضافة فيديو
+videoTemplate.back: رجوع
+videoEditTemplate.title: تعديل فيديو
+homeTemplate.title: Vidéo Center مرحبًا بك في
+homeTemplate.resultsFound: "فيديو تم العثور عليه بالكلمة"
+sidebar.about: من نحن
+sidebar.aboutText: "Vidéo Centerمرحبًا بك في ، مشروع متكامل تم إنشاؤه باستخدام Symfony. يمكنك التسجيل بنظام تأكيد عبر البريد الإلكتروني، وتسجيل الدخول، ونشر فيديوهاتك، وإدارتها، وتعديل ملفك الشخصي. يستخدم الموقع Bootstrap للواجهة الأمامية، وSymfony للواجهة الخلفية، وقاعدة بيانات MySQL."
+sidebar.howItWorks: كيف يعمل؟
+sidebar.step1: "شاهد الفيديوهات غير المميزة مجانًا، حتى بدون حساب."
+sidebar.step2: "أنشئ حسابًا مجانيًا لفتح الفيديوهات المميزة."
+sidebar.step3: "بمجرد تسجيل الدخول، انشر فيديوهاتك الخاصة بنقرة واحدة."
+sidebar.step4: "استخدم شريط البحث للعثور على فيديو محدد."
+videoTemplate.by: بواسطة
+videoTemplate.publishedOn: نُشر في
+videoTemplate.edit: تعديل
+videoTemplate.confirmDelete: "هل أنت متأكد أنك تريد حذف هذا الفيديو؟"
+videoTemplate.delete: حذف
+commentSection.comments: "التعليقات"
+commentForm.postComment: "نشر تعليق"
+commentSection.confirmDelete: "هل أنت متأكد أنك تريد حذف هذا التعليق؟"
+commentSection.delete: "حذف"
+homeTemplate.searchPlaceholder: "ابحث بكلمة مفتاحية..."

@@ -1,0 +1,83 @@
+vich_uploader.form_label.delete_confirm: "Rimuovere?"
+vich_uploader.link.download: Scaricare
+"You must login to see your account !": "Devi accedere per vedere il tuo account !"
+"You must login to edit your account !": "Devi accedere per modificare il tuo account !"
+"Account successfuly updated !": "Account aggiornato con successo !"
+"You are already logged in !": "Sei già connesso !"
+"Your account was successfully created ! Check your emails to confirm your registration.": "Il tuo account è stato creato con successo ! Controlla la tua email per confermare la registrazione."
+"Your email address has been verified !": "Il tuo indirizzo email è stato verificato !"
+videoController.index.emailNotVerified: "Devi confermare la tua email per creare/modificare video."
+"You must login to view a Premium Video !": "Devi accedere per vedere un Video Premium !"
+"You must confirm your email to view a Premium Video !": "Devi confermare la tua email per vedere un Video Premium !"
+"You must login to comment !": "Devi accedere per commentare !"
+"You must confirm your email to comment !": "Devi confermare la tua email per commentare !"
+"Your comment was successfully posted.": "Il tuo commento è stato pubblicato con successo."
+"You must confirm your email to edit Video !": "Devi confermare la tua email per modificare un Video !"
+"You must be the user ": "Devi essere l'utente "
+" to edit this video": " per modificare questo video"
+"You must login to edit Video !": "Devi accedere per modificare un Video !"
+"The video was successfully modified !": "Il video è stato modificato con successo !"
+"You must confirm your email to create Video !": "Devi confermare la tua email per creare un Video !"
+"You must login to create Video !": "Devi accedere per creare un Video !"
+"The video ": "Il video "
+" was successfully created": " è stato creato con successo"
+"You must confirm your email to delete Video !": "Devi confermare la tua email per eliminare un Video !"
+" to delete this video": " per eliminare questo video"
+"You must login to delete Video !": "Devi accedere per eliminare un Video !"
+" was successfully deleted !": " è stato eliminato con successo !"
+"Welcome ": "Benvenuto "
+"Update Profile": "Modifica Profilo"
+"Apply changes": "Applica le modifiche"
+accountShow.Accountcreatedon: "Account creato il"
+accountShow.EditAccount: "Modifica il tuo profilo"
+accountShow.myVideos: "I miei video"
+like.text: "Mi piace"
+navBar.home: Home
+navBar.createVideo: Crea video
+navBar.account: "Il mio profilo"
+navBar.logout: Disconnetti
+navBar.register: Registrati
+navBar.login: Accedi
+registerTemplate.title: Crea un account
+registerTemplate.button: Registrati
+resetPassword.emailSentTitle: Email di reimpostazione inviata
+resetPassword.emailSentText: "Se esiste un account associato alla tua email, ti abbiamo appena inviato un link per reimpostare la password. Questo link scadrà tra"
+resetPassword.checkSpam: "Se non ricevi un'email, controlla la cartella spam o"
+resetPassword.tryAgain: riprova
+resetPasswordEmail.greeting: Ciao!
+resetPasswordEmail.instructions: "Per reimpostare la password, visita il seguente link"
+resetPasswordEmail.expires: Questo link scadrà tra
+resetPasswordEmail.cheers: Cordiali saluti!
+resetPassword.title: Reimposta la tua password
+resetPassword.instructions: "Inserisci il tuo indirizzo email, ti invieremo un link per reimpostare la password."
+resetPassword.send: Invia il link di reimpostazione
+resetPassword.submit: Reimposta la password
+loginTemplate.title: Accedi
+loginTemplate.email: Email
+loginTemplate.password: Password
+loginTemplate.forgotPassword: Password dimenticata?
+loginTemplate.submit: Accedi
+loginTemplate.notRegistered: Non sei ancora registrato?
+loginTemplate.createAccount: Crea un account
+videoCreateTemplate.title: Aggiungi un video
+videoTemplate.back: Indietro
+videoEditTemplate.title: Modifica di un video
+homeTemplate.title: Benvenuto su Vidéo Center
+homeTemplate.resultsFound: "video trovati con il termine"
+sidebar.about: Chi siamo
+sidebar.aboutText: "Benvenuto su Vidéo Center, un progetto full-stack realizzato in Symfony. Puoi registrarti con un sistema di conferma via email, accedere, pubblicare i tuoi video, gestirli e modificare il tuo profilo. Il sito utilizza Bootstrap per il front-end, Symfony per il back-end e un database MySQL."
+sidebar.howItWorks: Come funziona?
+sidebar.step1: "Guarda gratuitamente i video non premium, anche senza account."
+sidebar.step2: "Crea un account gratuito per sbloccare i video premium."
+sidebar.step3: "Una volta connesso, pubblica i tuoi video in un clic."
+sidebar.step4: "Usa la barra di ricerca per trovare un video preciso."
+videoTemplate.by: Di
+videoTemplate.publishedOn: Pubblicato il
+videoTemplate.edit: Modifica
+videoTemplate.confirmDelete: "Sei sicuro di voler eliminare questo video?"
+videoTemplate.delete: Elimina
+commentSection.comments: "Commenti"
+commentForm.postComment: "Pubblica un commento"
+commentSection.confirmDelete: "Sei sicuro di voler eliminare questo commento?"
+commentSection.delete: "Elimina"
+homeTemplate.searchPlaceholder: "Cerca per parola chiave..."

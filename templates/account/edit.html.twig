@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Update Profile' %}
+
+{% block body %}
+    <div class="form-card-wrapper">
+        <div class="form-card">
+        <h1>{{ 'Update Profile'|trans }}</h1>
+
+        {{ form_start(userForm) }}
+
+        {{ form_row(userForm.firstname) }}
+
+        {{ form_row(userForm.lastname) }}
+
+        {{ form_row(userForm.imageFile) }}
+
+        <br>
+
+        <button type="submit" class="btn btn-space">
+            {{ 'Apply changes'|trans }}
+        </button>
+
+        {{ form_end(userForm) }}
+        </div>
+    </div>
+{% endblock %}
