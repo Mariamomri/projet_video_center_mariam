@@ -22,6 +22,6 @@ app:
     type: attribute
     prefix: /{_locale}
     requirements:
-        _locale: fr|en|it|nl
+        _locale: fr|en|it|nl|ar
     defaults:
         _locale: fr
