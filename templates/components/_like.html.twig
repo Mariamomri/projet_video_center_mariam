@@ -2,6 +2,7 @@
     <a class="btn btn-outline-primary btn-sm rounded-pill d-inline-flex align-items-center gap-2"
       href="{{ path('like.video', {id: video.id}) }}"
       data-action="like"
+      data-turbo="false"
       data-like-text="{{ 'like.text' | trans }}">
 
         <i class="fa-regular fa-thumbs-up like-icon-outline {{ app.user in video.likes ? 'd-none' : '' }}"></i>
