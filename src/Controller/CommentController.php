@@ -9,15 +9,16 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Security\Http\Attribute\IsGranted;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 class CommentController extends AbstractController
 {
     #[Route('/comment/{id}', name: 'comment.delete')]
     #[IsGranted('ROLE_USER')]
-    public function delete(Comment $comment, EntityManagerInterface $em, Request $request): Response
+    public function delete(Comment $comment, EntityManagerInterface $em, Request $request, TranslatorInterface $translator): Response
     {
         if ($comment->getAuthor() !== $this->getUser()) {
-            $this->addFlash('error', 'Vous ne pouvez supprimer que vos propres commentaires !');
+            $this->addFlash('error', $translator->trans('Vous ne pouvez supprimer que vos propres commentaires !'));
             return $this->redirectToRoute('app_video_show', [
                 'id' => $comment->getVideo()->getId(),
             ]);
@@ -28,7 +29,7 @@ class CommentController extends AbstractController
             $em->flush();
         }
 
-        $this->addFlash('success', 'Votre commentaire a bien été supprimé.');
+        $this->addFlash('success', $translator->trans('Votre commentaire a bien été supprimé.'));
 
         return $this->redirectToRoute('app_video_show', [
             'id' => $comment->getVideo()->getId(),

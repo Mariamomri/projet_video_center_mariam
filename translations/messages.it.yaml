@@ -81,3 +81,18 @@ commentForm.postComment: "Pubblica un commento"
 commentSection.confirmDelete: "Sei sicuro di voler eliminare questo commento?"
 commentSection.delete: "Elimina"
 homeTemplate.searchPlaceholder: "Cerca per parola chiave..."
+registerForm.firstname: Nome
+registerForm.lastname: Cognome
+registerForm.email: Email
+registerForm.plainPassword: Password
+registerForm.agreeTerms: Accetta i termini
+videoForm.title: Titolo
+videoForm.videoLink: Link Video
+videoForm.descritpion: Descrizione
+videoForm.premiumVideo: Video Riservato ai Membri
+videoForm.save: Salva
+accountShow.profile: Il Mio Profilo
+userForm.firstname: Nome
+userForm.lastname: Cognome
+"Vous ne pouvez supprimer que vos propres commentaires !": "Puoi eliminare solo i tuoi commenti !"
+"Votre commentaire a bien été supprimé.": "Il tuo commento è stato eliminato con successo."

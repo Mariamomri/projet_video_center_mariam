@@ -13,6 +13,11 @@ resetPasswordEmail.greeting: Bonjour !
 resetPasswordEmail.instructions: "Pour réinitialiser votre mot de passe, veuillez visiter le lien suivant"
 resetPasswordEmail.expires: Ce lien expirera dans
 resetPasswordEmail.cheers: Cordialement !
+confirmationEmail.greeting: Bonjour !
+confirmationEmail.instructions: "Merci de confirmer votre adresse email en cliquant sur le lien suivant"
+confirmationEmail.confirmLink: Confirmer mon email
+confirmationEmail.expires: Ce lien expirera dans
+confirmationEmail.cheers: Cordialement !
 resetPassword.title: Réinitialiser votre mot de passe
 resetPassword.instructions: "Saisissez votre adresse email, nous vous enverrons un lien pour réinitialiser votre mot de passe."
 resetPassword.send: Envoyer le lien de réinitialisation

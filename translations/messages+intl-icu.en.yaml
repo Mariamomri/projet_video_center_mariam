@@ -13,6 +13,11 @@ resetPasswordEmail.greeting: Hi!
 resetPasswordEmail.instructions: "To reset your password, please visit the following link"
 resetPasswordEmail.expires: "This link will expire in"
 resetPasswordEmail.cheers: Cheers!
+confirmationEmail.greeting: Hi!
+confirmationEmail.instructions: "Please confirm your email address by clicking the following link"
+confirmationEmail.confirmLink: Confirm my Email
+confirmationEmail.expires: "This link will expire in"
+confirmationEmail.cheers: Cheers!
 resetPassword.title: "Reset your password"
 resetPassword.instructions: "Enter your email address, and we will send you a link to reset your password."
 resetPassword.send: "Send password reset email"

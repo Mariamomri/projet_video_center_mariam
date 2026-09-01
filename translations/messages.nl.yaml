@@ -81,3 +81,18 @@ commentForm.postComment: "Plaats een reactie"
 commentSection.confirmDelete: "Weet je zeker dat je deze reactie wilt verwijderen?"
 commentSection.delete: "Verwijderen"
 homeTemplate.searchPlaceholder: "Zoek op trefwoord..."
+registerForm.firstname: Voornaam
+registerForm.lastname: Achternaam
+registerForm.email: E-mail
+registerForm.plainPassword: Wachtwoord
+registerForm.agreeTerms: Voorwaarden accepteren
+videoForm.title: Titel
+videoForm.videoLink: Videolink
+videoForm.descritpion: Beschrijving
+videoForm.premiumVideo: Video Alleen voor Leden
+videoForm.save: Opslaan
+accountShow.profile: Mijn Profiel
+userForm.firstname: Voornaam
+userForm.lastname: Achternaam
+"Vous ne pouvez supprimer que vos propres commentaires !": "Je kunt alleen je eigen reacties verwijderen !"
+"Votre commentaire a bien été supprimé.": "Je reactie is succesvol verwijderd."

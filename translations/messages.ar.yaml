@@ -81,3 +81,18 @@ commentForm.postComment: "نشر تعليق"
 commentSection.confirmDelete: "هل أنت متأكد أنك تريد حذف هذا التعليق؟"
 commentSection.delete: "حذف"
 homeTemplate.searchPlaceholder: "ابحث بكلمة مفتاحية..."
+registerForm.firstname: الاسم الأول
+registerForm.lastname: اسم العائلة
+registerForm.email: البريد الإلكتروني
+registerForm.plainPassword: كلمة المرور
+registerForm.agreeTerms: الموافقة على الشروط
+videoForm.title: العنوان
+videoForm.videoLink: رابط الفيديو
+videoForm.descritpion: الوصف
+videoForm.premiumVideo: فيديو مخصص للأعضاء
+videoForm.save: حفظ
+accountShow.profile: ملفي الشخصي
+userForm.firstname: الاسم الأول
+userForm.lastname: اسم العائلة
+"Vous ne pouvez supprimer que vos propres commentaires !": "لا يمكنك حذف سوى تعليقاتك الخاصة !"
+"Votre commentaire a bien été supprimé.": "تم حذف تعليقك بنجاح."
