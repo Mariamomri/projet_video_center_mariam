@@ -96,3 +96,10 @@ userForm.firstname: الاسم الأول
 userForm.lastname: اسم العائلة
 "Vous ne pouvez supprimer que vos propres commentaires !": "لا يمكنك حذف سوى تعليقاتك الخاصة !"
 "Votre commentaire a bien été supprimé.": "تم حذف تعليقك بنجاح."
+confirmationEmail.greeting: مرحباً!
+confirmationEmail.instructions: يرجى تأكيد عنوان بريدك الإلكتروني بالنقر على الرابط التالي
+confirmationEmail.confirmLink: تأكيد بريدي الإلكتروني
+confirmationEmail.expires: سينتهي صلاحية هذا الرابط خلال
+confirmationEmail.cheers: مع أطيب التحيات!
+changePasswordForm.newPassword: كلمة المرور الجديدة
+changePasswordForm.repeatPassword: تكرار كلمة المرور

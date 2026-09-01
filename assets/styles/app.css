@@ -42,6 +42,21 @@ a:hover {
     border-bottom: 1px solid var(--border);
 }
 
+/* icona hamburger: nel tema "dark" di bootstrap resta sempre bianca,
+   quindi nel nostro tema chiaro (sfondo bianco) diventava invisibile.
+   Qui la ridisegniamo scura solo quando data-bs-theme="light". */
+[data-bs-theme="light"] .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(22, 22, 42, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+[data-bs-theme="light"] .navbar-toggler {
+    border-color: var(--border);
+}
+
+[data-bs-theme="light"] .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.15rem rgba(22, 22, 42, 0.25);
+}
+
 /*logo*/
 .navbar-brand {
     display: flex;
@@ -723,6 +738,18 @@ body {
     overflow-x: hidden;
 }
 
+/* video nella pagina show : width="640" height="480" sono fissi nell'iframe,
+   quindi senza questa regola il video esce dallo schermo sui telefoni.
+   aspect-ratio mantiene le proporzioni 4/3 mentre si restringe. */
+article iframe {
+    width: 100%;
+    max-width: 640px;
+    aspect-ratio: 4 / 3;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 .video-card iframe {
     max-width: 100%;
 }
@@ -814,4 +841,13 @@ body {
     .video-grid {
         grid-template-columns: 1fr;
     }
+}
+
+.author-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    vertical-align: middle;
+    margin-right: 6px;
 }

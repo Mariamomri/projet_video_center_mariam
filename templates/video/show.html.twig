@@ -16,7 +16,10 @@
 
             <small>
                 <p>{{ 'videoTemplate.publishedOn' | trans }} {{ video.createdAt|date('d/m/Y H:i') }}</p>
-                <p>{{ 'videoTemplate.by' | trans }} {{ video.user.firstname ~ " " ~ video.user.lastname }}</p>
+                <p>
+                    <img class="author-avatar" src="{{ app.request.basePath }}{{ vich_uploader_asset(video.user, 'imageFile') }}" alt="{{ video.user.firstname }}">
+                    {{ 'videoTemplate.by' | trans }} {{ video.user.firstname ~ " " ~ video.user.lastname }}
+                </p>
             </small>
         </article>
         <div class="video-actions">
@@ -47,7 +50,10 @@
     {% for comment in video.comments %}
         <div class="comment-card">
             <p>{{ comment.content }}</p>
-            <small>{{ comment.author.firstname }} {{ comment.author.lastname }} - {{ comment.createdAt|date('d/m/Y H:i') }}</small>
+            <small>
+                <img class="author-avatar" src="{{ app.request.basePath }}{{ vich_uploader_asset(comment.author, 'imageFile') }}" alt="{{ comment.author.firstname }}">
+                {{ comment.author.firstname }} {{ comment.author.lastname }} - {{ comment.createdAt|date('d/m/Y H:i') }}
+            </small>
 
             {% if app.user and app.user.email is same as (comment.author.email) %}
                 <form method="post" action="{{ path('comment.delete', {id: comment.id}) }}" onsubmit="return confirm('{{ 'commentSection.confirmDelete' | trans }}')" style="display: inline;">

@@ -77,7 +77,10 @@
                     <iframe width="300" height="200" src="{{ video.videoLink }}"></iframe>
                 </a>
                 <p>{{ video.descritpion|slice(0, 25) }}</p>
-                <p>{{ 'videoTemplate.by' | trans }} {{ video.user.firstname }} {{ video.user.lastname }}</p>
+                <p>
+                    <img class="author-avatar" src="{{ app.request.basePath }}{{ vich_uploader_asset(video.user, 'imageFile') }}" alt="{{ video.user.firstname }}">
+                    {{ 'videoTemplate.by' | trans }} {{ video.user.firstname }} {{ video.user.lastname }}
+                </p>
                 <p>{{ video.createdAt|ago }}</p>
                 {% include "components/_like.html.twig" with { video: video } only %}
             </div>

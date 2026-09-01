@@ -96,3 +96,10 @@ commentForm.postComment: "Poster un commentaire"
 "Your comment was successfully posted.": "Votre commentaire a bien été publié."
 like.text: "J'aime"
 homeTemplate.searchPlaceholder: "Recherche via un mot clé..."
+changePasswordForm.newPassword: Nouveau mot de passe
+changePasswordForm.repeatPassword: Répéter le mot de passe
+"You must login to edit Video !": "Vous devez vous connecter pour modifier une vidéo !"
+"You must login to delete Video !": "Vous devez vous connecter pour supprimer une vidéo !"
+vich_uploader.form_label.delete_confirm: "Supprimer ?"
+vich_uploader.link.download: Télécharger
+videoTemplate.confirmDelete: "Êtes-vous sûr de vouloir supprimer cette vidéo ?"

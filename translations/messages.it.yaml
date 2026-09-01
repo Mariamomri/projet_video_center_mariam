@@ -96,3 +96,10 @@ userForm.firstname: Nome
 userForm.lastname: Cognome
 "Vous ne pouvez supprimer que vos propres commentaires !": "Puoi eliminare solo i tuoi commenti !"
 "Votre commentaire a bien été supprimé.": "Il tuo commento è stato eliminato con successo."
+confirmationEmail.greeting: Ciao!
+confirmationEmail.instructions: Conferma il tuo indirizzo email cliccando sul link seguente
+confirmationEmail.confirmLink: Conferma la mia email
+confirmationEmail.expires: Questo link scadrà tra
+confirmationEmail.cheers: Cordiali saluti!
+changePasswordForm.newPassword: Nuova password
+changePasswordForm.repeatPassword: Ripeti password

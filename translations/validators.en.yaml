@@ -13,3 +13,4 @@
 "Veuillez saisir un mot de passe.": "Please enter a password."
 "Votre mot de passe doit contenir au moins {{ limit }} caractères.": "Your password must be at least {{ limit }} characters long."
 'This contains an inappropriate word "{{ inappropriateWord }}".': 'This contains an inappropriate word "{{ inappropriateWord }}".'
+"Un compte existe déjà avec cet email.": "There is already an account with this email."

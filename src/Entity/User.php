@@ -21,7 +21,7 @@ use Vich\UploaderBundle\Mapping\Attribute as Vich;
 #[ORM\HasLifecycleCallbacks]
 #[ORM\Table(name: "users")]
 #[Vich\Uploadable]
-#[UniqueEntity(fields: ['email'], message: 'There is already an account with this email')]
+#[UniqueEntity(fields: ['email'], message: 'Un compte existe déjà avec cet email.')]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]

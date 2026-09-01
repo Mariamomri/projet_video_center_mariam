@@ -9,9 +9,9 @@
         if (storedTheme) {
             return storedTheme;
         }
-        return window.matchMedia("(prefers-color-scheme: dark)").matches
-            ? "dark"
-            : "light";
+        // Nessuna scelta salvata: il sito parte sempre in tema scuro di
+        // default, invece di seguire le impostazioni del dispositivo.
+        return "dark";
     };
 
     const setTheme = (theme) => {
